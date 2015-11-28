@@ -23,16 +23,17 @@ class ViewController: UIViewController {
         
         locationManager.requestAlwaysAuthorization()
         locationManager.delegate = self
+        locationManager.startUpdatingLocation()
         
         myMap.setUserTrackingMode(.Follow, animated: true)
     
         let bournemouthPier = CLLocationCoordinate2D(latitude: 50.716098, longitude: -1.875780)
-        let bournemouthPierRegion = CLCircularRegion(center: bournemouthPier, radius: 50, identifier: "Bournemouth Pier")
+        let bournemouthPierRegion = CLCircularRegion(center: bournemouthPier, radius: 20, identifier: "Bournemouth Pier")
         locationManager.startMonitoringForRegion(bournemouthPierRegion)
         
         
         let boscombePier = CLLocationCoordinate2D(latitude: 50.719914, longitude: -1.843552)
-        let boscombePierRegion = CLCircularRegion(center: boscombePier, radius: 50, identifier: "Boscombe Pier")
+        let boscombePierRegion = CLCircularRegion(center: boscombePier, radius: 20, identifier: "Boscombe Pier")
         locationManager.startMonitoringForRegion(boscombePierRegion)
     }
 
@@ -41,10 +42,14 @@ class ViewController: UIViewController {
 
 
 extension ViewController: CLLocationManagerDelegate {
+    
+    
+    
   
     func locationManager(manager: CLLocationManager, didEnterRegion region: CLRegion) {
        
             imagePier.image = UIImage(named: region.identifier)
+            imagePier.alpha = 0.2
     }
     
     func locationManager(manager: CLLocationManager, didExitRegion region: CLRegion) {
