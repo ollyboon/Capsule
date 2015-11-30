@@ -34,7 +34,7 @@ class ViewController: UIViewController {
         
         //Barrier 2
         let Barrier2 = CLLocationCoordinate2D(latitude: 50.716098, longitude: -1.875780)
-        let Barrier2Region = CLCircularRegion(center: Barrier2, radius: 10, identifier: "splash")
+        let Barrier2Region = CLCircularRegion(center: Barrier2, radius: 20, identifier: "splash")
         locationManager.startMonitoringForRegion(Barrier2Region)
         
         //Barrier 3
@@ -64,8 +64,8 @@ extension ViewController: CLLocationManagerDelegate {
   
     func locationManager(manager: CLLocationManager, didEnterRegion region: CLRegion) {
        
-           // imagePier.image = UIImage(named: region.identifier)
-            //imagePier.alpha = 0.5
+           //imagePier.image = UIImage(named: region.identifier)
+           //imagePier.alpha = 0.5
         
         //GIF Test
         let glitchGif = UIImage.gifWithName("glitch")
@@ -79,7 +79,7 @@ extension ViewController: CLLocationManagerDelegate {
     
     func locationManager(manager: CLLocationManager, didExitRegion region: CLRegion) {
 
-           // imagePier.image = nil
+         imagePier.image = nil
         
     }
     
