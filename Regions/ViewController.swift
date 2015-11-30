@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var imagePier: UIImageView!
     
     let locationManager = CLLocationManager ()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,14 +27,37 @@ class ViewController: UIViewController {
         
         myMap.setUserTrackingMode(.Follow, animated: true)
     
-        let bournemouthPier = CLLocationCoordinate2D(latitude: 50.716098, longitude: -1.875780)
-        let bournemouthPierRegion = CLCircularRegion(center: bournemouthPier, radius: 20, identifier: "Bournemouth Pier")
-        locationManager.startMonitoringForRegion(bournemouthPierRegion)
+        //Barrier 1
+        //let bournemouthPier = CLLocationCoordinate2D(latitude: 50.716098, longitude: -1.875780)
+        //let bournemouthPierRegion = CLCircularRegion(center: bournemouthPier, radius: 25, identifier: "glitch")
+        //locationManager.startMonitoringForRegion(bournemouthPierRegion)
+        
+        //Barrier 2
+        let Barrier2 = CLLocationCoordinate2D(latitude: 50.716098, longitude: -1.875780)
+        let Barrier2Region = CLCircularRegion(center: Barrier2, radius: 10, identifier: "splash")
+        locationManager.startMonitoringForRegion(Barrier2Region)
+        
+        //Barrier 3
+        //let Barrier3 = CLLocationCoordinate2D(latitude: 50.716098, longitude: -1.875780)
+        //let Barrier3Region = CLCircularRegion(center: Barrier3, radius: 3, identifier: "glitch")
+        //locationManager.startMonitoringForRegion(Barrier3Region)
         
         
         let boscombePier = CLLocationCoordinate2D(latitude: 50.719914, longitude: -1.843552)
-        let boscombePierRegion = CLCircularRegion(center: boscombePier, radius: 20, identifier: "Boscombe Pier")
+        let boscombePierRegion = CLCircularRegion(center: boscombePier, radius: 20, identifier: "protected")
         locationManager.startMonitoringForRegion(boscombePierRegion)
+        
+        //GIF Test
+        
+        let glitchGif = UIImage.gifWithName("glitch")
+        let imageView = UIImageView(image: glitchGif)
+        imageView.frame = CGRect(x: 0.0, y: 20.0, width: 350.0, height: 202.0)
+        
+        view.addSubview(imageView)
+        
+        
+        
+        
     }
 
 
@@ -43,13 +66,14 @@ class ViewController: UIViewController {
 
 extension ViewController: CLLocationManagerDelegate {
     
-    
+    //let newLocation = CLLocationCoordinate2D(latitude: 50.716098, longitude: -1.875780)
+    //let newLocation = 
     
   
     func locationManager(manager: CLLocationManager, didEnterRegion region: CLRegion) {
        
             imagePier.image = UIImage(named: region.identifier)
-            imagePier.alpha = 0.2
+            imagePier.alpha = 0.5
     }
     
     func locationManager(manager: CLLocationManager, didExitRegion region: CLRegion) {

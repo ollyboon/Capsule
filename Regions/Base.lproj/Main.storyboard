@@ -21,7 +21,7 @@
                                 <animations/>
                             </mapView>
                             <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rNV-al-IOs">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="138"/>
+                                <rect key="frame" x="0.0" y="267" width="600" height="333"/>
                                 <animations/>
                             </imageView>
                         </subviews>
