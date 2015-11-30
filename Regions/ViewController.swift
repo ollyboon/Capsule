@@ -47,14 +47,6 @@ class ViewController: UIViewController {
         let boscombePierRegion = CLCircularRegion(center: boscombePier, radius: 20, identifier: "protected")
         locationManager.startMonitoringForRegion(boscombePierRegion)
         
-        //GIF Test
-        
-        let glitchGif = UIImage.gifWithName("glitch")
-        let imageView = UIImageView(image: glitchGif)
-        imageView.frame = CGRect(x: 0.0, y: 20.0, width: 350.0, height: 202.0)
-        
-        view.addSubview(imageView)
-        
         
         
         
@@ -72,13 +64,23 @@ extension ViewController: CLLocationManagerDelegate {
   
     func locationManager(manager: CLLocationManager, didEnterRegion region: CLRegion) {
        
-            imagePier.image = UIImage(named: region.identifier)
-            imagePier.alpha = 0.5
+           // imagePier.image = UIImage(named: region.identifier)
+            //imagePier.alpha = 0.5
+        
+        //GIF Test
+        let glitchGif = UIImage.gifWithName("glitch")
+        let imageView = UIImageView(image: glitchGif)
+        imageView.frame = CGRect(x: 0.0, y: 20.0, width: 400.0, height: 650.0)
+        imageView.alpha = CGFloat(0.5)
+        
+        view.addSubview(imageView)
+        
     }
     
     func locationManager(manager: CLLocationManager, didExitRegion region: CLRegion) {
 
-            imagePier.image = nil
+           // imagePier.image = nil
+        
     }
     
     

@@ -20,18 +20,29 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
                             </mapView>
-                            <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rNV-al-IOs">
+                            <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rNV-al-IOs">
                                 <rect key="frame" x="0.0" y="267" width="600" height="333"/>
+                                <animations/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="protected" translatesAutoresizingMaskIntoConstraints="NO" id="7Pd-El-3NE">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
                             </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="7Pd-El-3NE" firstAttribute="leading" secondItem="rNV-al-IOs" secondAttribute="leading" id="2zp-x0-lQm"/>
                             <constraint firstItem="OO1-1I-Fzd" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="FHp-s7-crj"/>
+                            <constraint firstItem="7Pd-El-3NE" firstAttribute="trailing" secondItem="OO1-1I-Fzd" secondAttribute="trailing" id="HYL-S0-ikX"/>
                             <constraint firstItem="OO1-1I-Fzd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Nm0-QY-wN3"/>
+                            <constraint firstItem="7Pd-El-3NE" firstAttribute="leading" secondItem="OO1-1I-Fzd" secondAttribute="leading" id="WVt-rn-Mlh"/>
+                            <constraint firstItem="7Pd-El-3NE" firstAttribute="trailing" secondItem="rNV-al-IOs" secondAttribute="trailing" id="YoP-VP-kfB"/>
+                            <constraint firstItem="7Pd-El-3NE" firstAttribute="top" secondItem="OO1-1I-Fzd" secondAttribute="top" id="ae4-AO-rCs"/>
+                            <constraint firstItem="7Pd-El-3NE" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="gbn-Ou-ktw"/>
                             <constraint firstAttribute="trailing" secondItem="OO1-1I-Fzd" secondAttribute="trailing" id="hqr-Jf-Qvx"/>
                             <constraint firstItem="OO1-1I-Fzd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="jn2-fq-ewE"/>
+                            <constraint firstItem="7Pd-El-3NE" firstAttribute="bottom" secondItem="rNV-al-IOs" secondAttribute="bottom" id="y8R-AD-t12"/>
                         </constraints>
                     </view>
                     <connections>
@@ -44,4 +55,7 @@
             <point key="canvasLocation" x="305" y="429"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="protected" width="750" height="1334"/>
+    </resources>
 </document>
