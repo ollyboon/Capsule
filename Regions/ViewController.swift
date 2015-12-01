@@ -13,11 +13,11 @@ import CoreLocation
 class ViewController: UIViewController {
     
     @IBOutlet weak var myMap: MKMapView!
-    
-    @IBOutlet weak var imagePier: UIImageView!
+        
+    @IBOutlet weak var FirstLocationImg: UIImageView!
     
     let imageView = UIImageView()
-
+    
     let locationManager = CLLocationManager()
     
     var locationsArray = [CLLocationCoordinate2D]()
@@ -44,14 +44,14 @@ class ViewController: UIViewController {
         
         //Barrier 2
         let Barrier2 = CLLocationCoordinate2D(latitude: 50.716098, longitude: -1.875780)
-        let Barrier2Region = CLCircularRegion(center: Barrier2, radius: 20, identifier: "splash")
+        let Barrier2Region = CLCircularRegion(center: Barrier2, radius: 30, identifier: "splash")
         locationManager.startMonitoringForRegion(Barrier2Region)
         locationsArray.append(Barrier2)
         
-        //Barrier 3
-        //let Barrier3 = CLLocationCoordinate2D(latitude: 50.716098, longitude: -1.875780)
-        //let Barrier3Region = CLCircularRegion(center: Barrier3, radius: 3, identifier: "glitch")
-        //locationManager.startMonitoringForRegion(Barrier3Region)
+         //First Location
+         let FirstLocation = CLLocationCoordinate2D(latitude: 50.716098, longitude: -1.875780)
+         let FirstLocationRegion = CLCircularRegion(center: FirstLocation, radius: 10, identifier: "FirstLocation")
+         locationManager.startMonitoringForRegion(FirstLocationRegion)
         
         
         let boscombePier = CLLocationCoordinate2D(latitude: 50.719914, longitude: -1.843552)
@@ -89,11 +89,24 @@ extension ViewController: CLLocationManagerDelegate {
   
     func locationManager(manager: CLLocationManager, didEnterRegion region: CLRegion) {
 
-        //imageView.alpha = 0.5
         
         imageView.alpha = 0
         UIView.animateWithDuration(1.0) {
             self.imageView.alpha = 0.5
+        }
+        
+        if  region.identifier == "FirstLocation" {
+            
+            FirstLocationImg.alpha = 0
+            UIView.animateWithDuration(2.0) {
+                self.FirstLocationImg.alpha = 1
+            }
+            
+            imageView.alpha = 0.5
+            UIView.animateWithDuration(1.0) {
+                self.imageView.alpha = 0.1
+            }
+            
         }
     }
     
@@ -103,6 +116,12 @@ extension ViewController: CLLocationManagerDelegate {
         UIView.animateWithDuration(1.0) {
             self.imageView.alpha = 0
         }
+        
+        FirstLocationImg.alpha = 1
+        UIView.animateWithDuration(1.0) {
+            self.FirstLocationImg.alpha = 0
+        }
+        
     }
     
     
