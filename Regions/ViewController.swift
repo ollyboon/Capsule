@@ -89,12 +89,20 @@ extension ViewController: CLLocationManagerDelegate {
   
     func locationManager(manager: CLLocationManager, didEnterRegion region: CLRegion) {
 
-        imageView.alpha = 0.5
+        //imageView.alpha = 0.5
+        
+        imageView.alpha = 0
+        UIView.animateWithDuration(1.0) {
+            self.imageView.alpha = 0.5
+        }
     }
     
     func locationManager(manager: CLLocationManager, didExitRegion region: CLRegion) {
-        imageView.alpha = 0
         
+        imageView.alpha = 0.5
+        UIView.animateWithDuration(1.0) {
+            self.imageView.alpha = 0
+        }
     }
     
     
