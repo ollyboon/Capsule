@@ -16,10 +16,20 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var imagePier: UIImageView!
     
-    let locationManager = CLLocationManager ()
+    let imageView = UIImageView()
+
+    let locationManager = CLLocationManager()
+    
+    var locationsArray = [CLLocationCoordinate2D]()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        imageView.image = UIImage.gifWithName("glitch")
+        imageView.frame = CGRect(x: 0.0, y: 20.0, width: 400.0, height: 650.0)
+        imageView.alpha = 0
+        view.addSubview(imageView)
         
         locationManager.requestAlwaysAuthorization()
         locationManager.delegate = self
@@ -36,6 +46,7 @@ class ViewController: UIViewController {
         let Barrier2 = CLLocationCoordinate2D(latitude: 50.716098, longitude: -1.875780)
         let Barrier2Region = CLCircularRegion(center: Barrier2, radius: 20, identifier: "splash")
         locationManager.startMonitoringForRegion(Barrier2Region)
+        locationsArray.append(Barrier2)
         
         //Barrier 3
         //let Barrier3 = CLLocationCoordinate2D(latitude: 50.716098, longitude: -1.875780)
@@ -46,9 +57,8 @@ class ViewController: UIViewController {
         let boscombePier = CLLocationCoordinate2D(latitude: 50.719914, longitude: -1.843552)
         let boscombePierRegion = CLCircularRegion(center: boscombePier, radius: 20, identifier: "protected")
         locationManager.startMonitoringForRegion(boscombePierRegion)
-        
-        
-        
+        locationsArray.append(boscombePier)
+    
         
     }
 
@@ -61,25 +71,29 @@ extension ViewController: CLLocationManagerDelegate {
     //let newLocation = CLLocationCoordinate2D(latitude: 50.716098, longitude: -1.875780)
     //let newLocation = 
     
-  
-    func locationManager(manager: CLLocationManager, didEnterRegion region: CLRegion) {
-       
-           //imagePier.image = UIImage(named: region.identifier)
-           //imagePier.alpha = 0.5
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-        //GIF Test
-        let glitchGif = UIImage.gifWithName("glitch")
-        let imageView = UIImageView(image: glitchGif)
-        imageView.frame = CGRect(x: 0.0, y: 20.0, width: 400.0, height: 650.0)
-        imageView.alpha = CGFloat(0.5)
+        let newLocation = locations.last
         
-        view.addSubview(imageView)
+        if let newLocation = newLocation {
+            
+            for location in locationsArray {
+                print(newLocation.distanceFromLocation(CLLocation(latitude: location.latitude, longitude: location.longitude)))
+            }
+            
+        }
         
     }
     
-    func locationManager(manager: CLLocationManager, didExitRegion region: CLRegion) {
+    
+  
+    func locationManager(manager: CLLocationManager, didEnterRegion region: CLRegion) {
 
-         imagePier.image = nil
+        imageView.alpha = 0.5
+    }
+    
+    func locationManager(manager: CLLocationManager, didExitRegion region: CLRegion) {
+        imageView.alpha = 0
         
     }
     
