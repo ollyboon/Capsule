@@ -13,10 +13,10 @@ import CoreLocation
 class ViewController: UIViewController {
     
     @IBOutlet weak var myMap: MKMapView!
-        
-    @IBOutlet weak var FirstLocationImg: UIImageView!
     
     let imageView = UIImageView()
+    
+    let FirstLocationImg = UIImageView()
     
     let locationManager = CLLocationManager()
     
@@ -31,25 +31,27 @@ class ViewController: UIViewController {
         imageView.alpha = 0
         view.addSubview(imageView)
         
+        FirstLocationImg.image = UIImage(named: "cache1.png")
+        FirstLocationImg.frame = CGRect(x: 0.0, y: 5.0, width: 375.0, height: 650.0)
+        FirstLocationImg.alpha=0
+        view.addSubview(FirstLocationImg)
+        
+        
+        
         locationManager.requestAlwaysAuthorization()
         locationManager.delegate = self
         locationManager.startUpdatingLocation()
         
         myMap.setUserTrackingMode(.Follow, animated: true)
-    
-        //Barrier 1
-        //let bournemouthPier = CLLocationCoordinate2D(latitude: 50.716098, longitude: -1.875780)
-        //let bournemouthPierRegion = CLCircularRegion(center: bournemouthPier, radius: 25, identifier: "glitch")
-        //locationManager.startMonitoringForRegion(bournemouthPierRegion)
         
-        //Barrier 2
+        //Barrier
         let Barrier2 = CLLocationCoordinate2D(latitude: 50.716098, longitude: -1.875780)
         let Barrier2Region = CLCircularRegion(center: Barrier2, radius: 30, identifier: "splash")
         locationManager.startMonitoringForRegion(Barrier2Region)
         locationsArray.append(Barrier2)
         
          //First Location
-         let FirstLocation = CLLocationCoordinate2D(latitude: 50.716098, longitude: -1.875780)
+         let FirstLocation = CLLocationCoordinate2D(latitude: 50.715719, longitude: -1.875484)
          let FirstLocationRegion = CLCircularRegion(center: FirstLocation, radius: 10, identifier: "FirstLocation")
          locationManager.startMonitoringForRegion(FirstLocationRegion)
         
@@ -101,12 +103,6 @@ extension ViewController: CLLocationManagerDelegate {
             UIView.animateWithDuration(2.0) {
                 self.FirstLocationImg.alpha = 1
             }
-            
-            imageView.alpha = 0.5
-            UIView.animateWithDuration(1.0) {
-                self.imageView.alpha = 0.1
-            }
-            
         }
     }
     

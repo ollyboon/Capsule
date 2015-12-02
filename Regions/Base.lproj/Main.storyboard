@@ -24,10 +24,6 @@
                                 <rect key="frame" x="0.0" y="-31" width="600" height="631"/>
                                 <animations/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="cache-1" translatesAutoresizingMaskIntoConstraints="NO" id="fjL-pF-Qd7">
-                                <rect key="frame" x="0.0" y="-31" width="600" height="631"/>
-                                <animations/>
-                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -37,17 +33,12 @@
                             <constraint firstItem="OO1-1I-Fzd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Nm0-QY-wN3"/>
                             <constraint firstItem="7Pd-El-3NE" firstAttribute="leading" secondItem="OO1-1I-Fzd" secondAttribute="leading" id="WVt-rn-Mlh"/>
                             <constraint firstItem="7Pd-El-3NE" firstAttribute="top" secondItem="OO1-1I-Fzd" secondAttribute="top" id="ae4-AO-rCs"/>
-                            <constraint firstItem="fjL-pF-Qd7" firstAttribute="top" secondItem="7Pd-El-3NE" secondAttribute="top" id="cNQ-ef-aem"/>
-                            <constraint firstItem="fjL-pF-Qd7" firstAttribute="leading" secondItem="OO1-1I-Fzd" secondAttribute="leading" id="eZj-Vr-QiB"/>
                             <constraint firstItem="7Pd-El-3NE" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="gbn-Ou-ktw"/>
                             <constraint firstAttribute="trailing" secondItem="OO1-1I-Fzd" secondAttribute="trailing" id="hqr-Jf-Qvx"/>
                             <constraint firstItem="OO1-1I-Fzd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="jn2-fq-ewE"/>
-                            <constraint firstItem="fjL-pF-Qd7" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="r06-P3-zwW"/>
-                            <constraint firstItem="fjL-pF-Qd7" firstAttribute="trailing" secondItem="OO1-1I-Fzd" secondAttribute="trailing" id="rkU-r4-RoB"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="FirstLocationImg" destination="fjL-pF-Qd7" id="ozZ-ds-5Zx"/>
                         <outlet property="myMap" destination="OO1-1I-Fzd" id="122-Qx-YID"/>
                     </connections>
                 </viewController>
@@ -57,7 +48,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="cache-1" width="750" height="1334"/>
         <image name="protected" width="750" height="1334"/>
     </resources>
 </document>
