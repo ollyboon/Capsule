@@ -7,7 +7,7 @@
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
             <objects>
-                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" id="01J-lp-oVM" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
@@ -15,13 +15,28 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash-1" translatesAutoresizingMaskIntoConstraints="NO" id="W2w-JG-6iQ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="W2w-JG-6iQ" secondAttribute="trailing" id="Mpg-Ee-3cC"/>
+                            <constraint firstItem="W2w-JG-6iQ" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="NE1-GS-ZMi"/>
+                            <constraint firstItem="W2w-JG-6iQ" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Teh-m3-tak"/>
+                            <constraint firstItem="W2w-JG-6iQ" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="wbz-ey-Omj"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="269" y="369"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="splash-1" width="750" height="1334"/>
+    </resources>
 </document>

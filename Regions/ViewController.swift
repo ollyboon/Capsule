@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     
     let locationManager = CLLocationManager()
     
-    var locationsArray = [CLLocationCoordinate2D]()
+    var locationsArray = [MyLocation]()
 
     
     override func viewDidLoad() {
@@ -45,23 +45,15 @@ class ViewController: UIViewController {
         myMap.setUserTrackingMode(.Follow, animated: true)
         
         //Barrier
-        let Barrier2 = CLLocationCoordinate2D(latitude: 50.716098, longitude: -1.875780)
-        let Barrier2Region = CLCircularRegion(center: Barrier2, radius: 30, identifier: "splash")
-        locationManager.startMonitoringForRegion(Barrier2Region)
+        let Barrier1 = MyLocation(coord: CLLocationCoordinate2D(latitude: 50.716098, longitude: -24.875780), regionDistance: 10, identifier: "Barrier1")
+        locationsArray.append(Barrier1)
+        
+        let Barrier2 = MyLocation(coord: CLLocationCoordinate2D(latitude: 50.716098, longitude: -1.875780), regionDistance: 10, identifier: "Barrier2")
         locationsArray.append(Barrier2)
-        
-         //First Location
-         let FirstLocation = CLLocationCoordinate2D(latitude: 50.715719, longitude: -1.875484)
-         let FirstLocationRegion = CLCircularRegion(center: FirstLocation, radius: 10, identifier: "FirstLocation")
-         locationManager.startMonitoringForRegion(FirstLocationRegion)
-        
-        
-        let boscombePier = CLLocationCoordinate2D(latitude: 50.719914, longitude: -1.843552)
-        let boscombePierRegion = CLCircularRegion(center: boscombePier, radius: 20, identifier: "protected")
-        locationManager.startMonitoringForRegion(boscombePierRegion)
-        locationsArray.append(boscombePier)
     
-        
+        for location in locationsArray {
+            locationManager.startMonitoringForRegion(location.region)
+        }
     }
 
 
@@ -80,7 +72,15 @@ extension ViewController: CLLocationManagerDelegate {
         if let newLocation = newLocation {
             
             for location in locationsArray {
-                print(newLocation.distanceFromLocation(CLLocation(latitude: location.latitude, longitude: location.longitude)))
+                location.distance = newLocation.distanceFromLocation(CLLocation(latitude: location.coord.latitude, longitude: location.coord.longitude))
+            }
+            
+            locationsArray.sortInPlace { return $0.distance > $1.distance }
+            
+            print(locationsArray.first!.identifier)
+            
+            if locationsArray.first!.distance < 100 {
+                
             }
             
         }
@@ -90,12 +90,13 @@ extension ViewController: CLLocationManagerDelegate {
     
   
     func locationManager(manager: CLLocationManager, didEnterRegion region: CLRegion) {
-
         
-        imageView.alpha = 0
-        UIView.animateWithDuration(1.0) {
-            self.imageView.alpha = 0.5
-        }
+            
+            imageView.alpha = 0
+            UIView.animateWithDuration(1.0) {
+                self.imageView.alpha = 0.5
+            }
+            
         
         if  region.identifier == "FirstLocation" {
             

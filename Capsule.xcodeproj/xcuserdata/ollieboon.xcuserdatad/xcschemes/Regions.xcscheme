@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E8F50E211BE219DC001CE7F7"
-               BuildableName = "Regions.app"
-               BlueprintName = "Regions"
-               ReferencedContainer = "container:Regions.xcodeproj">
+               BuildableName = "Capsule.app"
+               BlueprintName = "Capsule"
+               ReferencedContainer = "container:Capsule.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E8F50E351BE219DC001CE7F7"
-               BuildableName = "RegionsTests.xctest"
-               BlueprintName = "RegionsTests"
-               ReferencedContainer = "container:Regions.xcodeproj">
+               BuildableName = "Capsule.xctest"
+               BlueprintName = "CapsuleTests"
+               ReferencedContainer = "container:Capsule.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E8F50E401BE219DD001CE7F7"
-               BuildableName = "RegionsUITests.xctest"
-               BlueprintName = "RegionsUITests"
-               ReferencedContainer = "container:Regions.xcodeproj">
+               BuildableName = "Capsule.xctest"
+               BlueprintName = "CapsuleUITests"
+               ReferencedContainer = "container:Capsule.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E8F50E211BE219DC001CE7F7"
-            BuildableName = "Regions.app"
-            BlueprintName = "Regions"
-            ReferencedContainer = "container:Regions.xcodeproj">
+            BuildableName = "Capsule.app"
+            BlueprintName = "Capsule"
+            ReferencedContainer = "container:Capsule.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E8F50E211BE219DC001CE7F7"
-            BuildableName = "Regions.app"
-            BlueprintName = "Regions"
-            ReferencedContainer = "container:Regions.xcodeproj">
+            BuildableName = "Capsule.app"
+            BlueprintName = "Capsule"
+            ReferencedContainer = "container:Capsule.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E8F50E211BE219DC001CE7F7"
-            BuildableName = "Regions.app"
-            BlueprintName = "Regions"
-            ReferencedContainer = "container:Regions.xcodeproj">
+            BuildableName = "Capsule.app"
+            BlueprintName = "Capsule"
+            ReferencedContainer = "container:Capsule.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

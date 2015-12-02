@@ -15,6 +15,8 @@
 		E8F50E3B1BE219DC001CE7F7 /* RegionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F50E3A1BE219DC001CE7F7 /* RegionsTests.swift */; };
 		E8F50E461BE219DD001CE7F7 /* RegionsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F50E451BE219DD001CE7F7 /* RegionsUITests.swift */; };
 		E8F50E541BE21A67001CE7F7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8F50E531BE21A67001CE7F7 /* MapKit.framework */; };
+		FB47B89A1C0F050C00B5E8A4 /* capglitch.gif in Resources */ = {isa = PBXBuildFile; fileRef = FB47B8991C0F050C00B5E8A4 /* capglitch.gif */; settings = {ASSET_TAGS = (); }; };
+		FB47B89E1C0F48E100B5E8A4 /* MyLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB47B89D1C0F48E100B5E8A4 /* MyLocation.swift */; settings = {ASSET_TAGS = (); }; };
 		FBEBAC0F1C0C5F9400186F92 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEBAC0E1C0C5F9400186F92 /* UIImage+Gif.swift */; settings = {ASSET_TAGS = (); }; };
 		FBEBAC111C0C607D00186F92 /* glitch.gif in Resources */ = {isa = PBXBuildFile; fileRef = FBEBAC101C0C607D00186F92 /* glitch.gif */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
@@ -37,21 +39,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E8F50E221BE219DC001CE7F7 /* Regions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Regions.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8F50E221BE219DC001CE7F7 /* Capsule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Capsule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8F50E251BE219DC001CE7F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8F50E271BE219DC001CE7F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E8F50E2A1BE219DC001CE7F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E8F50E2C1BE219DC001CE7F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8F50E2F1BE219DC001CE7F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E8F50E311BE219DC001CE7F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E8F50E361BE219DC001CE7F7 /* RegionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RegionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8F50E361BE219DC001CE7F7 /* Capsule.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Capsule.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8F50E3A1BE219DC001CE7F7 /* RegionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionsTests.swift; sourceTree = "<group>"; };
 		E8F50E3C1BE219DC001CE7F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E8F50E411BE219DD001CE7F7 /* RegionsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RegionsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8F50E411BE219DD001CE7F7 /* Capsule.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Capsule.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8F50E451BE219DD001CE7F7 /* RegionsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionsUITests.swift; sourceTree = "<group>"; };
 		E8F50E471BE219DD001CE7F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8F50E531BE21A67001CE7F7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		E8F50E551BE21D37001CE7F7 /* Bournemouth Loop.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Bournemouth Loop.gpx"; sourceTree = "<group>"; };
+		FB47B8991C0F050C00B5E8A4 /* capglitch.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = capglitch.gif; path = ../../capglitch.gif; sourceTree = "<group>"; };
+		FB47B89D1C0F48E100B5E8A4 /* MyLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyLocation.swift; sourceTree = "<group>"; };
 		FBEBAC0E1C0C5F9400186F92 /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+Gif.swift"; path = "../../../Downloads/SwiftGif-master/SwiftGifCommon/UIImage+Gif.swift"; sourceTree = "<group>"; };
 		FBEBAC101C0C607D00186F92 /* glitch.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = glitch.gif; path = ../../glitch.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,9 +100,9 @@
 		E8F50E231BE219DC001CE7F7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E8F50E221BE219DC001CE7F7 /* Regions.app */,
-				E8F50E361BE219DC001CE7F7 /* RegionsTests.xctest */,
-				E8F50E411BE219DD001CE7F7 /* RegionsUITests.xctest */,
+				E8F50E221BE219DC001CE7F7 /* Capsule.app */,
+				E8F50E361BE219DC001CE7F7 /* Capsule.xctest */,
+				E8F50E411BE219DD001CE7F7 /* Capsule.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,15 +110,17 @@
 		E8F50E241BE219DC001CE7F7 /* Regions */ = {
 			isa = PBXGroup;
 			children = (
-				E8F50E251BE219DC001CE7F7 /* AppDelegate.swift */,
 				E8F50E271BE219DC001CE7F7 /* ViewController.swift */,
-				E8F50E551BE21D37001CE7F7 /* Bournemouth Loop.gpx */,
+				FB47B89D1C0F48E100B5E8A4 /* MyLocation.swift */,
 				E8F50E291BE219DC001CE7F7 /* Main.storyboard */,
 				E8F50E2C1BE219DC001CE7F7 /* Assets.xcassets */,
-				E8F50E2E1BE219DC001CE7F7 /* LaunchScreen.storyboard */,
 				FBEBAC101C0C607D00186F92 /* glitch.gif */,
-				E8F50E311BE219DC001CE7F7 /* Info.plist */,
+				FB47B8991C0F050C00B5E8A4 /* capglitch.gif */,
 				FBEBAC0E1C0C5F9400186F92 /* UIImage+Gif.swift */,
+				E8F50E251BE219DC001CE7F7 /* AppDelegate.swift */,
+				E8F50E551BE21D37001CE7F7 /* Bournemouth Loop.gpx */,
+				E8F50E2E1BE219DC001CE7F7 /* LaunchScreen.storyboard */,
+				E8F50E311BE219DC001CE7F7 /* Info.plist */,
 			);
 			path = Regions;
 			sourceTree = "<group>";
@@ -140,9 +146,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E8F50E211BE219DC001CE7F7 /* Regions */ = {
+		E8F50E211BE219DC001CE7F7 /* Capsule */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E8F50E4A1BE219DD001CE7F7 /* Build configuration list for PBXNativeTarget "Regions" */;
+			buildConfigurationList = E8F50E4A1BE219DD001CE7F7 /* Build configuration list for PBXNativeTarget "Capsule" */;
 			buildPhases = (
 				E8F50E1E1BE219DC001CE7F7 /* Sources */,
 				E8F50E1F1BE219DC001CE7F7 /* Frameworks */,
@@ -152,14 +158,14 @@
 			);
 			dependencies = (
 			);
-			name = Regions;
+			name = Capsule;
 			productName = Regions;
-			productReference = E8F50E221BE219DC001CE7F7 /* Regions.app */;
+			productReference = E8F50E221BE219DC001CE7F7 /* Capsule.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E8F50E351BE219DC001CE7F7 /* RegionsTests */ = {
+		E8F50E351BE219DC001CE7F7 /* CapsuleTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E8F50E4D1BE219DD001CE7F7 /* Build configuration list for PBXNativeTarget "RegionsTests" */;
+			buildConfigurationList = E8F50E4D1BE219DD001CE7F7 /* Build configuration list for PBXNativeTarget "CapsuleTests" */;
 			buildPhases = (
 				E8F50E321BE219DC001CE7F7 /* Sources */,
 				E8F50E331BE219DC001CE7F7 /* Frameworks */,
@@ -170,14 +176,14 @@
 			dependencies = (
 				E8F50E381BE219DC001CE7F7 /* PBXTargetDependency */,
 			);
-			name = RegionsTests;
+			name = CapsuleTests;
 			productName = RegionsTests;
-			productReference = E8F50E361BE219DC001CE7F7 /* RegionsTests.xctest */;
+			productReference = E8F50E361BE219DC001CE7F7 /* Capsule.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		E8F50E401BE219DD001CE7F7 /* RegionsUITests */ = {
+		E8F50E401BE219DD001CE7F7 /* CapsuleUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E8F50E501BE219DD001CE7F7 /* Build configuration list for PBXNativeTarget "RegionsUITests" */;
+			buildConfigurationList = E8F50E501BE219DD001CE7F7 /* Build configuration list for PBXNativeTarget "CapsuleUITests" */;
 			buildPhases = (
 				E8F50E3D1BE219DD001CE7F7 /* Sources */,
 				E8F50E3E1BE219DD001CE7F7 /* Frameworks */,
@@ -188,9 +194,9 @@
 			dependencies = (
 				E8F50E431BE219DD001CE7F7 /* PBXTargetDependency */,
 			);
-			name = RegionsUITests;
+			name = CapsuleUITests;
 			productName = RegionsUITests;
-			productReference = E8F50E411BE219DD001CE7F7 /* RegionsUITests.xctest */;
+			productReference = E8F50E411BE219DD001CE7F7 /* Capsule.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -216,7 +222,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E8F50E1D1BE219DC001CE7F7 /* Build configuration list for PBXProject "Regions" */;
+			buildConfigurationList = E8F50E1D1BE219DC001CE7F7 /* Build configuration list for PBXProject "Capsule" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -229,9 +235,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E8F50E211BE219DC001CE7F7 /* Regions */,
-				E8F50E351BE219DC001CE7F7 /* RegionsTests */,
-				E8F50E401BE219DD001CE7F7 /* RegionsUITests */,
+				E8F50E211BE219DC001CE7F7 /* Capsule */,
+				E8F50E351BE219DC001CE7F7 /* CapsuleTests */,
+				E8F50E401BE219DD001CE7F7 /* CapsuleUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -245,6 +251,7 @@
 				FBEBAC111C0C607D00186F92 /* glitch.gif in Resources */,
 				E8F50E2D1BE219DC001CE7F7 /* Assets.xcassets in Resources */,
 				E8F50E2B1BE219DC001CE7F7 /* Main.storyboard in Resources */,
+				FB47B89A1C0F050C00B5E8A4 /* capglitch.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +278,7 @@
 			files = (
 				FBEBAC0F1C0C5F9400186F92 /* UIImage+Gif.swift in Sources */,
 				E8F50E281BE219DC001CE7F7 /* ViewController.swift in Sources */,
+				FB47B89E1C0F48E100B5E8A4 /* MyLocation.swift in Sources */,
 				E8F50E261BE219DC001CE7F7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,12 +304,12 @@
 /* Begin PBXTargetDependency section */
 		E8F50E381BE219DC001CE7F7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E8F50E211BE219DC001CE7F7 /* Regions */;
+			target = E8F50E211BE219DC001CE7F7 /* Capsule */;
 			targetProxy = E8F50E371BE219DC001CE7F7 /* PBXContainerItemProxy */;
 		};
 		E8F50E431BE219DD001CE7F7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E8F50E211BE219DC001CE7F7 /* Regions */;
+			target = E8F50E211BE219DC001CE7F7 /* Capsule */;
 			targetProxy = E8F50E421BE219DD001CE7F7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -416,8 +424,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Regions/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ollyboon.Regions;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ollyboon.Capsule;
+				PRODUCT_NAME = Capsule;
 			};
 			name = Debug;
 		};
@@ -428,8 +436,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Regions/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ollyboon.Regions;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ollyboon.Capsule;
+				PRODUCT_NAME = Capsule;
 			};
 			name = Release;
 		};
@@ -440,8 +448,8 @@
 				INFOPLIST_FILE = RegionsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ollyboon.RegionsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Regions.app/Regions";
+				PRODUCT_NAME = Capsule;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Capsule.app/Capsule";
 			};
 			name = Debug;
 		};
@@ -452,8 +460,8 @@
 				INFOPLIST_FILE = RegionsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ollyboon.RegionsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Regions.app/Regions";
+				PRODUCT_NAME = Capsule;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Capsule.app/Capsule";
 			};
 			name = Release;
 		};
@@ -463,7 +471,7 @@
 				INFOPLIST_FILE = RegionsUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ollyboon.RegionsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Capsule;
 				TEST_TARGET_NAME = Regions;
 				USES_XCTRUNNER = YES;
 			};
@@ -475,7 +483,7 @@
 				INFOPLIST_FILE = RegionsUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ollyboon.RegionsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Capsule;
 				TEST_TARGET_NAME = Regions;
 				USES_XCTRUNNER = YES;
 			};
@@ -484,7 +492,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E8F50E1D1BE219DC001CE7F7 /* Build configuration list for PBXProject "Regions" */ = {
+		E8F50E1D1BE219DC001CE7F7 /* Build configuration list for PBXProject "Capsule" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E8F50E481BE219DD001CE7F7 /* Debug */,
@@ -493,7 +501,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E8F50E4A1BE219DD001CE7F7 /* Build configuration list for PBXNativeTarget "Regions" */ = {
+		E8F50E4A1BE219DD001CE7F7 /* Build configuration list for PBXNativeTarget "Capsule" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E8F50E4B1BE219DD001CE7F7 /* Debug */,
@@ -502,7 +510,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E8F50E4D1BE219DD001CE7F7 /* Build configuration list for PBXNativeTarget "RegionsTests" */ = {
+		E8F50E4D1BE219DD001CE7F7 /* Build configuration list for PBXNativeTarget "CapsuleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E8F50E4E1BE219DD001CE7F7 /* Debug */,
@@ -511,7 +519,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E8F50E501BE219DD001CE7F7 /* Build configuration list for PBXNativeTarget "RegionsUITests" */ = {
+		E8F50E501BE219DD001CE7F7 /* Build configuration list for PBXNativeTarget "CapsuleUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E8F50E511BE219DD001CE7F7 /* Debug */,

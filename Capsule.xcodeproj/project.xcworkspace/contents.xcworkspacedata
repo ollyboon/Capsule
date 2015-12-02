@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Regions.xcodeproj">
+      location = "self:/Users/ollieboon/Desktop/Capsule/Capsule.xcodeproj">
    </FileRef>
 </Workspace>
