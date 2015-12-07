@@ -8,9 +8,6 @@ class MyLocation {
     var regionDistance: Double!
     var identifier: String!
     
-    var cheese = "asda"
-    
-    
     
     var region: CLCircularRegion  {
         return CLCircularRegion(center: coord, radius: regionDistance, identifier: identifier)

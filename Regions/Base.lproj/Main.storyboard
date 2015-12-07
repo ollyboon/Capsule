@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TKr-62-kLc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TKr-62-kLc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OO1-1I-Fzd">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OO1-1I-Fzd">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
                             </mapView>
@@ -46,10 +46,10 @@
             </objects>
             <point key="canvasLocation" x="355" y="431"/>
         </scene>
-        <!--View Controller-->
+        <!--Start View Controller-->
         <scene sceneID="V3X-Eu-XHB">
             <objects>
-                <viewController id="TKr-62-kLc" sceneMemberID="viewController">
+                <viewController id="TKr-62-kLc" customClass="StartViewController" customModule="Capsule" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IWQ-S2-tZ0"/>
                         <viewControllerLayoutGuide type="bottom" id="DtX-3V-e7F"/>
@@ -70,27 +70,26 @@
                                     <constraint firstAttribute="height" constant="150" id="Gwd-Y4-sL7"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="LDT-jV-8G1">
-                                <rect key="frame" x="180" y="224" width="240" height="247"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" text="Welcome to capsule... " textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LDT-jV-8G1">
+                                <rect key="frame" x="155" y="222" width="285" height="309"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="247" id="G87-vm-ibF"/>
-                                    <constraint firstAttribute="width" constant="240" id="TEh-YD-uEl"/>
+                                    <constraint firstAttribute="height" constant="309" id="G87-vm-ibF"/>
+                                    <constraint firstAttribute="width" constant="285" id="TEh-YD-uEl"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" red="0.062745098039215685" green="0.53725490196078429" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ubJ-UI-qNp">
-                                <rect key="frame" x="254" y="523" width="87" height="57"/>
+                                <rect key="frame" x="254" y="543" width="87" height="57"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Start">
                                     <color key="titleColor" red="1" green="0.35125499939820781" blue="0.35935737214720798" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="zcO-aP-CWH"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" action="showDetailViewController:sender:" id="zcO-aP-CWH"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -103,11 +102,11 @@
                             <constraint firstItem="DtX-3V-e7F" firstAttribute="top" secondItem="ubJ-UI-qNp" secondAttribute="bottom" constant="125" id="GcE-rw-eG3"/>
                             <constraint firstItem="Lq0-9h-7ca" firstAttribute="centerX" secondItem="ubJ-UI-qNp" secondAttribute="centerX" id="Nrf-Mc-EVe"/>
                             <constraint firstAttribute="trailing" secondItem="gUH-fg-Uyb" secondAttribute="trailing" id="Ygk-eS-NCT"/>
-                            <constraint firstItem="LDT-jV-8G1" firstAttribute="centerX" secondItem="gUH-fg-Uyb" secondAttribute="centerX" id="ZTU-6s-BIY"/>
+                            <constraint firstItem="LDT-jV-8G1" firstAttribute="centerX" secondItem="gUH-fg-Uyb" secondAttribute="centerX" constant="-2.5" id="ZTU-6s-BIY"/>
                             <constraint firstItem="gUH-fg-Uyb" firstAttribute="leading" secondItem="ME5-IG-QvT" secondAttribute="leading" id="il5-iX-i4H"/>
-                            <constraint firstItem="ubJ-UI-qNp" firstAttribute="top" secondItem="LDT-jV-8G1" secondAttribute="bottom" constant="8" symbolic="YES" id="lld-w0-8qr"/>
+                            <constraint firstItem="ubJ-UI-qNp" firstAttribute="top" secondItem="LDT-jV-8G1" secondAttribute="bottom" constant="-2" id="lld-w0-8qr"/>
                             <constraint firstItem="Lq0-9h-7ca" firstAttribute="top" secondItem="IWQ-S2-tZ0" secondAttribute="bottom" constant="36" id="np7-69-e4h"/>
-                            <constraint firstItem="LDT-jV-8G1" firstAttribute="top" secondItem="Lq0-9h-7ca" secondAttribute="bottom" constant="18" id="teV-N3-Tcz"/>
+                            <constraint firstItem="LDT-jV-8G1" firstAttribute="top" secondItem="Lq0-9h-7ca" secondAttribute="bottom" constant="16" id="teV-N3-Tcz"/>
                         </constraints>
                     </view>
                 </viewController>

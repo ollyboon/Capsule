@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<gpx version="1.1" creator="Xcode">
+    
+    <wpt lat="50.738669" lon="-1.873083">
+        <name>End of road</name>
+        <time>2014-09-24T14:55:30Z</time>
+    </wpt>
+    
+    <wpt lat="50.735803" lon="-1.875422">
+        <name>Home</name>
+        <time>2014-09-24T14:55:40Z</time>
+    </wpt>
+    
+    <wpt lat="50.735409" lon="-1.879327">
+        <name>Last Point</name>
+        <time>2014-09-24T14:55:55Z</time>
+    </wpt>
+    
+</gpx>

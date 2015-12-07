@@ -15,10 +15,12 @@
 		E8F50E3B1BE219DC001CE7F7 /* RegionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F50E3A1BE219DC001CE7F7 /* RegionsTests.swift */; };
 		E8F50E461BE219DD001CE7F7 /* RegionsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F50E451BE219DD001CE7F7 /* RegionsUITests.swift */; };
 		E8F50E541BE21A67001CE7F7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8F50E531BE21A67001CE7F7 /* MapKit.framework */; };
-		FB47B89A1C0F050C00B5E8A4 /* capglitch.gif in Resources */ = {isa = PBXBuildFile; fileRef = FB47B8991C0F050C00B5E8A4 /* capglitch.gif */; settings = {ASSET_TAGS = (); }; };
-		FB47B89E1C0F48E100B5E8A4 /* MyLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB47B89D1C0F48E100B5E8A4 /* MyLocation.swift */; settings = {ASSET_TAGS = (); }; };
-		FBEBAC0F1C0C5F9400186F92 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEBAC0E1C0C5F9400186F92 /* UIImage+Gif.swift */; settings = {ASSET_TAGS = (); }; };
-		FBEBAC111C0C607D00186F92 /* glitch.gif in Resources */ = {isa = PBXBuildFile; fileRef = FBEBAC101C0C607D00186F92 /* glitch.gif */; settings = {ASSET_TAGS = (); }; };
+		FB47B89E1C0F48E100B5E8A4 /* MyLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB47B89D1C0F48E100B5E8A4 /* MyLocation.swift */; };
+		FBA37E541C0FA00400A8EE3A /* Home Route.gpx in Resources */ = {isa = PBXBuildFile; fileRef = FBA37E531C0FA00400A8EE3A /* Home Route.gpx */; };
+		FBA37E561C15A6B100A8EE3A /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA37E551C15A6B100A8EE3A /* StartViewController.swift */; };
+		FBA37E581C15A72300A8EE3A /* glitch1.gif in Resources */ = {isa = PBXBuildFile; fileRef = FBA37E571C15A72300A8EE3A /* glitch1.gif */; };
+		FBEBAC0F1C0C5F9400186F92 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEBAC0E1C0C5F9400186F92 /* UIImage+Gif.swift */; };
+		FBEBAC111C0C607D00186F92 /* glitch.gif in Resources */ = {isa = PBXBuildFile; fileRef = FBEBAC101C0C607D00186F92 /* glitch.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,8 +56,10 @@
 		E8F50E471BE219DD001CE7F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8F50E531BE21A67001CE7F7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		E8F50E551BE21D37001CE7F7 /* Bournemouth Loop.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Bournemouth Loop.gpx"; sourceTree = "<group>"; };
-		FB47B8991C0F050C00B5E8A4 /* capglitch.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = capglitch.gif; path = ../../capglitch.gif; sourceTree = "<group>"; };
 		FB47B89D1C0F48E100B5E8A4 /* MyLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyLocation.swift; sourceTree = "<group>"; };
+		FBA37E531C0FA00400A8EE3A /* Home Route.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Home Route.gpx"; sourceTree = "<group>"; };
+		FBA37E551C15A6B100A8EE3A /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		FBA37E571C15A72300A8EE3A /* glitch1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = glitch1.gif; path = ../../glitch1.gif; sourceTree = "<group>"; };
 		FBEBAC0E1C0C5F9400186F92 /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+Gif.swift"; path = "../../../Downloads/SwiftGif-master/SwiftGifCommon/UIImage+Gif.swift"; sourceTree = "<group>"; };
 		FBEBAC101C0C607D00186F92 /* glitch.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = glitch.gif; path = ../../glitch.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,12 +117,14 @@
 				E8F50E271BE219DC001CE7F7 /* ViewController.swift */,
 				FB47B89D1C0F48E100B5E8A4 /* MyLocation.swift */,
 				E8F50E291BE219DC001CE7F7 /* Main.storyboard */,
+				FBA37E551C15A6B100A8EE3A /* StartViewController.swift */,
 				E8F50E2C1BE219DC001CE7F7 /* Assets.xcassets */,
 				FBEBAC101C0C607D00186F92 /* glitch.gif */,
-				FB47B8991C0F050C00B5E8A4 /* capglitch.gif */,
+				FBA37E571C15A72300A8EE3A /* glitch1.gif */,
 				FBEBAC0E1C0C5F9400186F92 /* UIImage+Gif.swift */,
 				E8F50E251BE219DC001CE7F7 /* AppDelegate.swift */,
 				E8F50E551BE21D37001CE7F7 /* Bournemouth Loop.gpx */,
+				FBA37E531C0FA00400A8EE3A /* Home Route.gpx */,
 				E8F50E2E1BE219DC001CE7F7 /* LaunchScreen.storyboard */,
 				E8F50E311BE219DC001CE7F7 /* Info.plist */,
 			);
@@ -247,11 +253,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBA37E581C15A72300A8EE3A /* glitch1.gif in Resources */,
 				E8F50E301BE219DC001CE7F7 /* LaunchScreen.storyboard in Resources */,
+				FBA37E541C0FA00400A8EE3A /* Home Route.gpx in Resources */,
 				FBEBAC111C0C607D00186F92 /* glitch.gif in Resources */,
 				E8F50E2D1BE219DC001CE7F7 /* Assets.xcassets in Resources */,
 				E8F50E2B1BE219DC001CE7F7 /* Main.storyboard in Resources */,
-				FB47B89A1C0F050C00B5E8A4 /* capglitch.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBA37E561C15A6B100A8EE3A /* StartViewController.swift in Sources */,
 				FBEBAC0F1C0C5F9400186F92 /* UIImage+Gif.swift in Sources */,
 				E8F50E281BE219DC001CE7F7 /* ViewController.swift in Sources */,
 				FB47B89E1C0F48E100B5E8A4 /* MyLocation.swift in Sources */,
@@ -423,9 +431,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Regions/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ollyboon.Capsule;
 				PRODUCT_NAME = Capsule;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -435,9 +445,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Regions/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ollyboon.Capsule;
 				PRODUCT_NAME = Capsule;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

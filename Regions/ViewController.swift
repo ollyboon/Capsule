@@ -45,11 +45,14 @@ class ViewController: UIViewController {
         myMap.setUserTrackingMode(.Follow, animated: true)
         
         //Barrier
-        let Barrier1 = MyLocation(coord: CLLocationCoordinate2D(latitude: 50.716098, longitude: -24.875780), regionDistance: 10, identifier: "Barrier1")
+        let Barrier1 = MyLocation(coord: CLLocationCoordinate2D(latitude: 50.716098, longitude: -24.875780), regionDistance: 30, identifier: "Barrier1")
         locationsArray.append(Barrier1)
         
         let Barrier2 = MyLocation(coord: CLLocationCoordinate2D(latitude: 50.716098, longitude: -1.875780), regionDistance: 10, identifier: "Barrier2")
         locationsArray.append(Barrier2)
+        
+        let Home = MyLocation(coord: CLLocationCoordinate2D(latitude: 50.734646, longitude: -1.877253), regionDistance: 20, identifier: "Home")
+        locationsArray.append(Home)
     
         for location in locationsArray {
             locationManager.startMonitoringForRegion(location.region)
@@ -98,12 +101,16 @@ extension ViewController: CLLocationManagerDelegate {
             }
             
         
-        if  region.identifier == "FirstLocation" {
+        if  region.identifier == "Home" {
             
             FirstLocationImg.alpha = 0
             UIView.animateWithDuration(2.0) {
                 self.FirstLocationImg.alpha = 1
             }
+        }
+        
+        if locationsArray.first!.distance < 50 {
+            //imageView.alpha = locationsArray.first!.distance
         }
     }
     
