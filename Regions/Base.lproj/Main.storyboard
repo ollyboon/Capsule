@@ -20,25 +20,55 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
                             </mapView>
-                            <imageView userInteractionEnabled="NO" alpha="0.94999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="protected" translatesAutoresizingMaskIntoConstraints="NO" id="7Pd-El-3NE">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="protectedbg" translatesAutoresizingMaskIntoConstraints="NO" id="7Pd-El-3NE">
                                 <rect key="frame" x="0.0" y="-31" width="600" height="631"/>
                                 <animations/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unknownelement" translatesAutoresizingMaskIntoConstraints="NO" id="tRf-gz-Dh0">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dial" translatesAutoresizingMaskIntoConstraints="NO" id="b1B-RQ-Jvg">
+                                <rect key="frame" x="194" y="20" width="212" height="212"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="212" id="Sai-2p-5tD"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ISDtxt" translatesAutoresizingMaskIntoConstraints="NO" id="jA0-ll-LGH">
+                                <rect key="frame" x="192" y="21" width="225" height="210"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="225" id="xjG-F9-tde"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="tRf-gz-Dh0" firstAttribute="top" secondItem="OO1-1I-Fzd" secondAttribute="top" id="3xF-tS-xu8"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="b1B-RQ-Jvg" secondAttribute="bottom" constant="368" id="ECS-MT-N0P"/>
                             <constraint firstItem="OO1-1I-Fzd" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="FHp-s7-crj"/>
                             <constraint firstItem="7Pd-El-3NE" firstAttribute="trailing" secondItem="OO1-1I-Fzd" secondAttribute="trailing" id="HYL-S0-ikX"/>
+                            <constraint firstItem="tRf-gz-Dh0" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="LH8-ce-hx6"/>
+                            <constraint firstItem="b1B-RQ-Jvg" firstAttribute="centerX" secondItem="OO1-1I-Fzd" secondAttribute="centerX" id="Lg0-in-Ikc"/>
                             <constraint firstItem="OO1-1I-Fzd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Nm0-QY-wN3"/>
                             <constraint firstItem="7Pd-El-3NE" firstAttribute="leading" secondItem="OO1-1I-Fzd" secondAttribute="leading" id="WVt-rn-Mlh"/>
+                            <constraint firstItem="tRf-gz-Dh0" firstAttribute="trailing" secondItem="OO1-1I-Fzd" secondAttribute="trailing" id="X6K-R6-mgR"/>
+                            <constraint firstItem="jA0-ll-LGH" firstAttribute="leading" secondItem="b1B-RQ-Jvg" secondAttribute="leading" constant="-2" id="Ykc-34-vQJ"/>
                             <constraint firstItem="7Pd-El-3NE" firstAttribute="top" secondItem="OO1-1I-Fzd" secondAttribute="top" id="ae4-AO-rCs"/>
+                            <constraint firstItem="jA0-ll-LGH" firstAttribute="centerY" secondItem="b1B-RQ-Jvg" secondAttribute="centerY" id="eMj-8Q-Ran"/>
+                            <constraint firstItem="tRf-gz-Dh0" firstAttribute="leading" secondItem="OO1-1I-Fzd" secondAttribute="leading" id="eNY-nh-RZJ"/>
                             <constraint firstItem="7Pd-El-3NE" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="gbn-Ou-ktw"/>
                             <constraint firstAttribute="trailing" secondItem="OO1-1I-Fzd" secondAttribute="trailing" id="hqr-Jf-Qvx"/>
                             <constraint firstItem="OO1-1I-Fzd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="jn2-fq-ewE"/>
+                            <constraint firstItem="b1B-RQ-Jvg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="w1J-nz-9IG"/>
+                            <constraint firstItem="jA0-ll-LGH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="1" id="yNv-3r-vF0"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="Dial" destination="b1B-RQ-Jvg" id="tsR-Wg-kap"/>
+                        <outlet property="Unknown" destination="tRf-gz-Dh0" id="r60-zh-0cx"/>
                         <outlet property="myMap" destination="OO1-1I-Fzd" id="122-Qx-YID"/>
                     </connections>
                 </viewController>
@@ -62,7 +92,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="capsule-logo" translatesAutoresizingMaskIntoConstraints="NO" id="Lq0-9h-7ca">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="capsule-logo" translatesAutoresizingMaskIntoConstraints="NO" id="Lq0-9h-7ca">
                                 <rect key="frame" x="224" y="56" width="147" height="150"/>
                                 <animations/>
                                 <constraints>
@@ -70,19 +100,20 @@
                                     <constraint firstAttribute="height" constant="150" id="Gwd-Y4-sL7"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" text="Welcome to capsule... " textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LDT-jV-8G1">
-                                <rect key="frame" x="155" y="222" width="285" height="309"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" bounces="NO" scrollEnabled="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LDT-jV-8G1">
+                                <rect key="frame" x="155" y="268" width="285" height="212"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="309" id="G87-vm-ibF"/>
+                                    <constraint firstAttribute="height" constant="196" id="G87-vm-ibF"/>
                                     <constraint firstAttribute="width" constant="285" id="TEh-YD-uEl"/>
                                 </constraints>
-                                <color key="textColor" red="0.062745098039215685" green="0.53725490196078429" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <string key="text">Welcome to capsule, let us take you into a world of conspiracy. The future is ruled by ISD, a technology company that has created an app that allows complete privacy for all of your personal data. Press "Start" to enter the ISD Security app and begin the adventure...</string>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ubJ-UI-qNp">
-                                <rect key="frame" x="254" y="543" width="87" height="57"/>
+                                <rect key="frame" x="257" y="488" width="87" height="57"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Start">
@@ -99,14 +130,14 @@
                             <constraint firstItem="gUH-fg-Uyb" firstAttribute="bottom" secondItem="DtX-3V-e7F" secondAttribute="top" id="3No-By-0nW"/>
                             <constraint firstItem="ubJ-UI-qNp" firstAttribute="centerX" secondItem="ME5-IG-QvT" secondAttribute="centerX" id="8Bx-Ry-rBa"/>
                             <constraint firstItem="gUH-fg-Uyb" firstAttribute="top" secondItem="ME5-IG-QvT" secondAttribute="top" id="AWV-c2-p73"/>
-                            <constraint firstItem="DtX-3V-e7F" firstAttribute="top" secondItem="ubJ-UI-qNp" secondAttribute="bottom" constant="125" id="GcE-rw-eG3"/>
-                            <constraint firstItem="Lq0-9h-7ca" firstAttribute="centerX" secondItem="ubJ-UI-qNp" secondAttribute="centerX" id="Nrf-Mc-EVe"/>
+                            <constraint firstItem="DtX-3V-e7F" firstAttribute="top" secondItem="ubJ-UI-qNp" secondAttribute="bottom" constant="55" id="GcE-rw-eG3"/>
+                            <constraint firstItem="Lq0-9h-7ca" firstAttribute="centerX" secondItem="ubJ-UI-qNp" secondAttribute="centerX" constant="-3" id="Nrf-Mc-EVe"/>
                             <constraint firstAttribute="trailing" secondItem="gUH-fg-Uyb" secondAttribute="trailing" id="Ygk-eS-NCT"/>
                             <constraint firstItem="LDT-jV-8G1" firstAttribute="centerX" secondItem="gUH-fg-Uyb" secondAttribute="centerX" constant="-2.5" id="ZTU-6s-BIY"/>
                             <constraint firstItem="gUH-fg-Uyb" firstAttribute="leading" secondItem="ME5-IG-QvT" secondAttribute="leading" id="il5-iX-i4H"/>
-                            <constraint firstItem="ubJ-UI-qNp" firstAttribute="top" secondItem="LDT-jV-8G1" secondAttribute="bottom" constant="-2" id="lld-w0-8qr"/>
+                            <constraint firstItem="ubJ-UI-qNp" firstAttribute="top" secondItem="LDT-jV-8G1" secondAttribute="bottom" constant="24" id="lld-w0-8qr"/>
                             <constraint firstItem="Lq0-9h-7ca" firstAttribute="top" secondItem="IWQ-S2-tZ0" secondAttribute="bottom" constant="36" id="np7-69-e4h"/>
-                            <constraint firstItem="LDT-jV-8G1" firstAttribute="top" secondItem="Lq0-9h-7ca" secondAttribute="bottom" constant="16" id="teV-N3-Tcz"/>
+                            <constraint firstItem="LDT-jV-8G1" firstAttribute="top" secondItem="Lq0-9h-7ca" secondAttribute="bottom" constant="62" id="teV-N3-Tcz"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -116,8 +147,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Dial" width="500" height="500"/>
+        <image name="ISDtxt" width="500" height="500"/>
         <image name="bg" width="750" height="1334"/>
         <image name="capsule-logo" width="1000" height="1000"/>
-        <image name="protected" width="750" height="1334"/>
+        <image name="protectedbg" width="750" height="1334"/>
+        <image name="unknownelement" width="750" height="1334"/>
     </resources>
 </document>

@@ -14,6 +14,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var myMap: MKMapView!
     
+    @IBOutlet weak var Dial: UIImageView!
+    
+    @IBOutlet weak var Unknown: UIImageView!
+    
     let imageView = UIImageView()
     
     let FirstLocationImg = UIImageView()
@@ -21,10 +25,11 @@ class ViewController: UIViewController {
     let locationManager = CLLocationManager()
     
     var locationsArray = [MyLocation]()
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //LOAD SUBVIEW IMAGES IN BACKGROUND
         
         imageView.image = UIImage.gifWithName("glitch")
         imageView.frame = CGRect(x: 0.0, y: 20.0, width: 400.0, height: 650.0)
@@ -36,7 +41,40 @@ class ViewController: UIViewController {
         FirstLocationImg.alpha=0
         view.addSubview(FirstLocationImg)
         
+        //ANIMATIONS
         
+        let fullRotation = CGFloat(M_PI * 2)
+        
+        let animation = CAKeyframeAnimation()
+        animation.keyPath = "transform.rotation.z"
+        animation.duration = 6
+        animation.removedOnCompletion = false
+        animation.fillMode = kCAFillModeForwards
+        animation.repeatCount = Float.infinity
+        animation.values = [fullRotation, fullRotation/2, fullRotation*3/4, fullRotation]
+        
+        Dial.layer.addAnimation(animation, forKey: "rotate")
+        
+        
+        
+        UIView.animateWithDuration(4.0, delay:3, options: [.Repeat, .Autoreverse], animations: {
+         
+        self.Unknown.alpha = 1
+        self.Unknown.alpha = 0.2
+                    
+        }, completion: nil)
+        
+        //NOTIFICATION 
+        
+        let alert = UIAlertView()
+        alert.title = "How to play"
+        alert.message = "Explore the bourenmouth seafront region on foot to discover clues"
+        alert.addButtonWithTitle("Understood")
+        alert.show()
+
+
+        
+        //LOCATIONS
         
         locationManager.requestAlwaysAuthorization()
         locationManager.delegate = self
@@ -44,7 +82,7 @@ class ViewController: UIViewController {
         
         myMap.setUserTrackingMode(.Follow, animated: true)
         
-        //Barrier
+        //BOURNMOUTH PIER
         let Barrier1 = MyLocation(coord: CLLocationCoordinate2D(latitude: 50.716098, longitude: -24.875780), regionDistance: 30, identifier: "Barrier1")
         locationsArray.append(Barrier1)
         
@@ -63,10 +101,10 @@ class ViewController: UIViewController {
 }
 
 
+
+
+
 extension ViewController: CLLocationManagerDelegate {
-    
-    //let newLocation = CLLocationCoordinate2D(latitude: 50.716098, longitude: -1.875780)
-    //let newLocation = 
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
@@ -82,10 +120,6 @@ extension ViewController: CLLocationManagerDelegate {
             
             print(locationsArray.first!.identifier)
             print(locationsArray.first!.distance)
-            
-            if locationsArray.first!.distance < 100 {
-                
-            }
             
         }
         
@@ -129,6 +163,11 @@ extension ViewController: CLLocationManagerDelegate {
         }
         
     }
+    
+    
+}
+
+extension UIView {
     
     
 }
