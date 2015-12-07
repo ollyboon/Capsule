@@ -81,6 +81,7 @@ extension ViewController: CLLocationManagerDelegate {
             locationsArray.sortInPlace { return $0.distance > $1.distance }
             
             print(locationsArray.first!.identifier)
+            print(locationsArray.first!.distance)
             
             if locationsArray.first!.distance < 100 {
                 
@@ -99,7 +100,6 @@ extension ViewController: CLLocationManagerDelegate {
             UIView.animateWithDuration(1.0) {
                 self.imageView.alpha = 0.5
             }
-            
         
         if  region.identifier == "Home" {
             
@@ -108,6 +108,8 @@ extension ViewController: CLLocationManagerDelegate {
                 self.FirstLocationImg.alpha = 1
             }
         }
+        
+        //THIS IS THE BIT IM STUCK ON
         
         if locationsArray.first!.distance < 50 {
             //imageView.alpha = locationsArray.first!.distance

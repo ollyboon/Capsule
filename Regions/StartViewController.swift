@@ -22,7 +22,7 @@ class StartViewController: UIViewController {
         
         
         imageView.alpha = 0
-        UIView.animateWithDuration(10.0) {
+        UIView.animateWithDuration(5.0) {
             self.imageView.alpha = 0.5
             self.imageView.alpha = 0
 
