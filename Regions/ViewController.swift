@@ -68,20 +68,16 @@ class ViewController: UIViewController {
         
         
         
-        UIView.animateWithDuration(4.0, delay:3, options: [.Repeat, .Autoreverse], animations: {
+        UIView.animateWithDuration(10.0, delay:0, options: [.Repeat, .Autoreverse], animations: {
          
         self.Unknown.alpha = 1
         self.Unknown.alpha = 0.2
-                    
+        self.Unknown.alpha = 1
+
+            
         }, completion: nil)
         
-        //NOTIFICATION 
-        
-        //let alert = UIAlertView()
-        //alert.title = "How to play"
-        //alert.message = "Explore the bourenmouth seafront region on foot to discover clues"
-        //alert.addButtonWithTitle("Understood")
-        //alert.show()
+        //HOW TO PLAY ALERT
         
         let alertController = UIAlertController(title: "Default Style", message: "A standard alert.", preferredStyle: .Alert)
         
@@ -99,8 +95,6 @@ class ViewController: UIViewController {
             // ...
         }
 
-
-        
         //LOCATIONS
         
         locationManager.requestAlwaysAuthorization()
@@ -109,11 +103,12 @@ class ViewController: UIViewController {
         
         myMap.setUserTrackingMode(.Follow, animated: true)
         
+        
         //BOURNMOUTH PIER
-        let Barrier1 = MyLocation(coord: CLLocationCoordinate2D(latitude: 50.716098, longitude: -24.875780), regionDistance: 30, identifier: "Barrier1")
+        let Barrier1 = MyLocation(coord: CLLocationCoordinate2D(latitude: 50.716098, longitude: -1.875780), regionDistance: 200, identifier: "Barrier1")
         locationsArray.append(Barrier1)
         
-        let Barrier2 = MyLocation(coord: CLLocationCoordinate2D(latitude: 50.716098, longitude: -1.875780), regionDistance: 10, identifier: "Barrier2")
+        let Barrier2 = MyLocation(coord: CLLocationCoordinate2D(latitude: 50.716098, longitude: -1.875780), regionDistance: 50, identifier: "Barrier2")
         locationsArray.append(Barrier2)
         
         let Home = MyLocation(coord: CLLocationCoordinate2D(latitude: 50.734646, longitude: -1.877253), regionDistance: 20, identifier: "Home")
@@ -140,10 +135,12 @@ extension ViewController: CLLocationManagerDelegate {
         if let newLocation = newLocation {
             
             for location in locationsArray {
-                location.distance = newLocation.distanceFromLocation(CLLocation(latitude: location.coord.latitude, longitude: location.coord.longitude))
+                location.distance = newLocation.distanceFromLocation(CLLocation(latitude: location.coord.latitude, longitude: location.coord.longitude)) / 2001
             }
             
-            locationsArray.sortInPlace { return $0.distance > $1.distance }
+            //var  = min(0, 200) //max(1, 0)
+            
+            locationsArray.sortInPlace { return $0.distance < $1.distance }
             
             print(locationsArray.first!.identifier)
             print(locationsArray.first!.distance)
@@ -156,13 +153,9 @@ extension ViewController: CLLocationManagerDelegate {
   
     func locationManager(manager: CLLocationManager, didEnterRegion region: CLRegion) {
         
-            
-            imageView.alpha = 0
-            UIView.animateWithDuration(1.0) {
-                self.imageView.alpha = 0.5
-            }
+    
         
-        if  region.identifier == "Home" {
+        if  region.identifier == "Barrier2" {
             
             FirstLocationImg.alpha = 0
             UIView.animateWithDuration(2.0) {
@@ -170,19 +163,15 @@ extension ViewController: CLLocationManagerDelegate {
             }
         }
         
-        //THIS IS THE BIT IM STUCK ON
+        //OPACITY OF GLITCH
         
-        if locationsArray.first!.distance < 50 {
-            //imageView.alpha = locationsArray.first!.distance
+        if locationsArray.first!.distance < 200 {
+            imageView.alpha = CGFloat(locationsArray.first!.distance)
         }
     }
     
     func locationManager(manager: CLLocationManager, didExitRegion region: CLRegion) {
         
-        imageView.alpha = 0.5
-        UIView.animateWithDuration(1.0) {
-            self.imageView.alpha = 0
-        }
         
         FirstLocationImg.alpha = 1
         UIView.animateWithDuration(1.0) {
@@ -190,11 +179,6 @@ extension ViewController: CLLocationManagerDelegate {
         }
         
     }
-    
-    
-}
-
-extension UIView {
     
     
 }
