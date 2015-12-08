@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TKr-62-kLc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -20,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
                             </mapView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="protectedbg" translatesAutoresizingMaskIntoConstraints="NO" id="7Pd-El-3NE">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="protectedbg" translatesAutoresizingMaskIntoConstraints="NO" id="7Pd-El-3NE">
                                 <rect key="frame" x="0.0" y="-31" width="600" height="631"/>
                                 <animations/>
                             </imageView>
@@ -42,6 +43,20 @@
                                     <constraint firstAttribute="width" constant="225" id="xjG-F9-tde"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BtK-gi-9Ch">
+                                <rect key="frame" x="4" y="506" width="45" height="45"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="58l-BT-46S"/>
+                                    <constraint firstAttribute="width" secondItem="BtK-gi-9Ch" secondAttribute="height" multiplier="1:1" id="CPA-Dx-P5e"/>
+                                    <constraint firstAttribute="height" constant="45" id="l3J-HG-xO6"/>
+                                    <constraint firstAttribute="width" secondItem="BtK-gi-9Ch" secondAttribute="height" multiplier="1:1" id="zmu-4y-W8q"/>
+                                </constraints>
+                                <state key="normal" image="?button"/>
+                                <connections>
+                                    <action selector="showAlert" destination="BYZ-38-t0r" eventType="touchUpInside" id="dKc-gd-nls"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -56,12 +71,14 @@
                             <constraint firstItem="7Pd-El-3NE" firstAttribute="leading" secondItem="OO1-1I-Fzd" secondAttribute="leading" id="WVt-rn-Mlh"/>
                             <constraint firstItem="tRf-gz-Dh0" firstAttribute="trailing" secondItem="OO1-1I-Fzd" secondAttribute="trailing" id="X6K-R6-mgR"/>
                             <constraint firstItem="jA0-ll-LGH" firstAttribute="leading" secondItem="b1B-RQ-Jvg" secondAttribute="leading" constant="-2" id="Ykc-34-vQJ"/>
-                            <constraint firstItem="7Pd-El-3NE" firstAttribute="top" secondItem="OO1-1I-Fzd" secondAttribute="top" id="ae4-AO-rCs"/>
+                            <constraint firstItem="7Pd-El-3NE" firstAttribute="top" secondItem="OO1-1I-Fzd" secondAttribute="top" constant="-31" id="ae4-AO-rCs"/>
                             <constraint firstItem="jA0-ll-LGH" firstAttribute="centerY" secondItem="b1B-RQ-Jvg" secondAttribute="centerY" id="eMj-8Q-Ran"/>
                             <constraint firstItem="tRf-gz-Dh0" firstAttribute="leading" secondItem="OO1-1I-Fzd" secondAttribute="leading" id="eNY-nh-RZJ"/>
                             <constraint firstItem="7Pd-El-3NE" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="gbn-Ou-ktw"/>
                             <constraint firstAttribute="trailing" secondItem="OO1-1I-Fzd" secondAttribute="trailing" id="hqr-Jf-Qvx"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BtK-gi-9Ch" secondAttribute="bottom" constant="49" id="jcL-jE-NSu"/>
                             <constraint firstItem="OO1-1I-Fzd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="jn2-fq-ewE"/>
+                            <constraint firstItem="BtK-gi-9Ch" firstAttribute="leading" secondItem="OO1-1I-Fzd" secondAttribute="leading" constant="4" id="n0g-WN-b55"/>
                             <constraint firstItem="b1B-RQ-Jvg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="w1J-nz-9IG"/>
                             <constraint firstItem="jA0-ll-LGH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="1" id="yNv-3r-vF0"/>
                         </constraints>
@@ -147,6 +164,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="?button" width="200" height="200"/>
         <image name="Dial" width="500" height="500"/>
         <image name="ISDtxt" width="500" height="500"/>
         <image name="bg" width="750" height="1334"/>

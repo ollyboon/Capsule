@@ -18,6 +18,17 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var Unknown: UIImageView!
     
+    @IBAction func showAlert() {
+        
+        let alertController = UIAlertController(title: "How to play", message: "Explore the bourenmouth seafront region on foot to discover clues" , preferredStyle: .Alert)
+        
+        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        alertController.addAction(defaultAction)
+        
+        presentViewController(alertController, animated: true, completion: nil)
+        
+    }
+    
     let imageView = UIImageView()
     
     let FirstLocationImg = UIImageView()
@@ -66,11 +77,27 @@ class ViewController: UIViewController {
         
         //NOTIFICATION 
         
-        let alert = UIAlertView()
-        alert.title = "How to play"
-        alert.message = "Explore the bourenmouth seafront region on foot to discover clues"
-        alert.addButtonWithTitle("Understood")
-        alert.show()
+        //let alert = UIAlertView()
+        //alert.title = "How to play"
+        //alert.message = "Explore the bourenmouth seafront region on foot to discover clues"
+        //alert.addButtonWithTitle("Understood")
+        //alert.show()
+        
+        let alertController = UIAlertController(title: "Default Style", message: "A standard alert.", preferredStyle: .Alert)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
+            // ...
+        }
+        alertController.addAction(cancelAction)
+        
+        let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
+            // ...
+        }
+        alertController.addAction(OKAction)
+        
+        self.presentViewController(alertController, animated: true) {
+            // ...
+        }
 
 
         
