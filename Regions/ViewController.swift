@@ -135,15 +135,68 @@ extension ViewController: CLLocationManagerDelegate {
         if let newLocation = newLocation {
             
             for location in locationsArray {
-                location.distance = newLocation.distanceFromLocation(CLLocation(latitude: location.coord.latitude, longitude: location.coord.longitude)) / 2001
+                location.distance = newLocation.distanceFromLocation(CLLocation(latitude: location.coord.latitude, longitude: location.coord.longitude)) 
             }
             
-            //var  = min(0, 200) //max(1, 0)
+          
             
             locationsArray.sortInPlace { return $0.distance < $1.distance }
             
             print(locationsArray.first!.identifier)
-            print(locationsArray.first!.distance)
+            //print(locationsArray.first!.distance)
+            
+            switch locationsArray.first!.distance {
+            case 0..<49:
+                imageView.alpha = 0.85
+            case 50..<59:
+                imageView.alpha = 0.8
+                
+            case 60..<69:
+                imageView.alpha = 0.75
+                
+            case 70..<79:
+                imageView.alpha = 0.7
+                
+            case 80..<89:
+                imageView.alpha = 0.65
+                
+            case 90..<99:
+                imageView.alpha = 0.6
+                
+            case 100..<109:
+                imageView.alpha = 0.55
+                
+            case 110..<119:
+                imageView.alpha = 0.5
+                
+            case 120..<129:
+                imageView.alpha = 0.45
+                
+            case 130..<139:
+                imageView.alpha = 0.4
+                
+            case 140..<149:
+                imageView.alpha = 0.35
+                
+            case 150..<159:
+                imageView.alpha = 0.3
+        
+            case 160..<169:
+                imageView.alpha = 0.25
+                
+            case 170..<179:
+                imageView.alpha = 0.2
+                
+            case 180..<189:
+                imageView.alpha = 0.15
+                
+            case 190..<200:
+                imageView.alpha = 0.1
+                
+                
+            default:
+                imageView.alpha = 0
+            }
             
         }
         
@@ -163,11 +216,7 @@ extension ViewController: CLLocationManagerDelegate {
             }
         }
         
-        //OPACITY OF GLITCH
         
-        if locationsArray.first!.distance < 200 {
-            imageView.alpha = CGFloat(locationsArray.first!.distance)
-        }
     }
     
     func locationManager(manager: CLLocationManager, didExitRegion region: CLRegion) {
@@ -177,6 +226,8 @@ extension ViewController: CLLocationManagerDelegate {
         UIView.animateWithDuration(1.0) {
             self.FirstLocationImg.alpha = 0
         }
+        
+        imageView.alpha = 0
         
     }
     
