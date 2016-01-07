@@ -37,6 +37,8 @@ class ViewController: UIViewController {
     
     var locationsArray = [MyLocation]()
     
+    //var ignoreArray = [MyLocation.regionDistance > 51]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -82,17 +84,14 @@ class ViewController: UIViewController {
         let alertController = UIAlertController(title: "Default Style", message: "A standard alert.", preferredStyle: .Alert)
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
-            // ...
         }
         alertController.addAction(cancelAction)
         
         let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
-            // ...
         }
         alertController.addAction(OKAction)
         
         self.presentViewController(alertController, animated: true) {
-            // ...
         }
 
         //LOCATIONS
@@ -111,12 +110,22 @@ class ViewController: UIViewController {
         let Barrier2 = MyLocation(coord: CLLocationCoordinate2D(latitude: 50.716098, longitude: -1.875780), regionDistance: 50, identifier: "Barrier2")
         locationsArray.append(Barrier2)
         
+        //HOME
         let Home = MyLocation(coord: CLLocationCoordinate2D(latitude: 50.734646, longitude: -1.877253), regionDistance: 20, identifier: "Home")
         locationsArray.append(Home)
     
         for location in locationsArray {
             locationManager.startMonitoringForRegion(location.region)
         }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "Log" {
+            let vc = segue.destinationViewController as! LogViewController
+            vc.locationsArray = locationsArray
+        }
+        
     }
 
 
@@ -147,51 +156,85 @@ extension ViewController: CLLocationManagerDelegate {
             
             switch locationsArray.first!.distance {
             case 0..<49:
-                imageView.alpha = 0.85
-            case 50..<59:
                 imageView.alpha = 0.8
-                
-            case 60..<69:
+                UIView.animateWithDuration(1.0) {
+                    self.imageView.alpha = 0.85
+                }
+            case 50..<59:
                 imageView.alpha = 0.75
-                
-            case 70..<79:
+                UIView.animateWithDuration(1.0) {
+                    self.imageView.alpha = 0.8
+                }
+            case 60..<69:
                 imageView.alpha = 0.7
-                
-            case 80..<89:
+                UIView.animateWithDuration(1.0) {
+                    self.imageView.alpha = 0.75
+                }
+            case 70..<79:
                 imageView.alpha = 0.65
-                
-            case 90..<99:
+                UIView.animateWithDuration(1.0) {
+                    self.imageView.alpha = 0.7
+                }
+            case 80..<89:
                 imageView.alpha = 0.6
-                
-            case 100..<109:
+                UIView.animateWithDuration(1.0) {
+                    self.imageView.alpha = 0.65
+                }
+            case 90..<99:
                 imageView.alpha = 0.55
-                
-            case 110..<119:
+                UIView.animateWithDuration(1.0) {
+                    self.imageView.alpha = 0.6
+                }
+            case 100..<109:
                 imageView.alpha = 0.5
-                
-            case 120..<129:
+                UIView.animateWithDuration(1.0) {
+                    self.imageView.alpha = 0.55
+                }
+            case 110..<119:
                 imageView.alpha = 0.45
-                
-            case 130..<139:
+                UIView.animateWithDuration(1.0) {
+                    self.imageView.alpha = 0.5
+                }
+            case 120..<129:
                 imageView.alpha = 0.4
-                
+                UIView.animateWithDuration(1.0) {
+                    self.imageView.alpha = 0.45
+                }
+            case 130..<139:
+                imageView.alpha = 35
+                UIView.animateWithDuration(1.0) {
+                    self.imageView.alpha = 0.4
+                }
             case 140..<149:
-                imageView.alpha = 0.35
-                
-            case 150..<159:
                 imageView.alpha = 0.3
-        
-            case 160..<169:
+                UIView.animateWithDuration(1.0) {
+                    self.imageView.alpha = 0.35
+                }
+            case 150..<159:
                 imageView.alpha = 0.25
-                
-            case 170..<179:
+                UIView.animateWithDuration(1.0) {
+                    self.imageView.alpha = 0.3
+                }
+            case 160..<169:
                 imageView.alpha = 0.2
-                
-            case 180..<189:
+                UIView.animateWithDuration(1.0) {
+                    self.imageView.alpha = 0.25
+                }
+            case 170..<179:
                 imageView.alpha = 0.15
-                
-            case 190..<200:
+                UIView.animateWithDuration(1.0) {
+                    self.imageView.alpha = 0.2
+                }
+            case 180..<189:
                 imageView.alpha = 0.1
+                UIView.animateWithDuration(1.0) {
+                    self.imageView.alpha = 0.15
+                }
+            case 190..<200:
+                imageView.alpha = 0
+                UIView.animateWithDuration(1.0) {
+                    self.imageView.alpha = 0.1
+                }
                 
                 
             default:
@@ -206,12 +249,21 @@ extension ViewController: CLLocationManagerDelegate {
   
     func locationManager(manager: CLLocationManager, didEnterRegion region: CLRegion) {
         
-    
+        for location in locationsArray {
+            if region.identifier == location.identifier {
+                location.isFound = true
+            }
+            
+            if location.regionDistance > 51 {
+                location.isFound = false
+            }
+        }
+        
         
         if  region.identifier == "Barrier2" {
             
             FirstLocationImg.alpha = 0
-            UIView.animateWithDuration(2.0) {
+            UIView.animateWithDuration(4.0) {
                 self.FirstLocationImg.alpha = 1
             }
         }

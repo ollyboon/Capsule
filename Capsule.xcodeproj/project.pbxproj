@@ -18,6 +18,7 @@
 		FB47B89E1C0F48E100B5E8A4 /* MyLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB47B89D1C0F48E100B5E8A4 /* MyLocation.swift */; };
 		FB5D67B11C1987D900699501 /* glitch.gif in Resources */ = {isa = PBXBuildFile; fileRef = FB5D67B01C1987D900699501 /* glitch.gif */; };
 		FB5D67B51C198D8500699501 /* glitch1.gif in Resources */ = {isa = PBXBuildFile; fileRef = FB5D67B41C198D8500699501 /* glitch1.gif */; };
+		FB8343081C3E69E70087B272 /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8343071C3E69E70087B272 /* LogViewController.swift */; };
 		FBA37E541C0FA00400A8EE3A /* Home Route.gpx in Resources */ = {isa = PBXBuildFile; fileRef = FBA37E531C0FA00400A8EE3A /* Home Route.gpx */; };
 		FBA37E561C15A6B100A8EE3A /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA37E551C15A6B100A8EE3A /* StartViewController.swift */; };
 		FBEBAC0F1C0C5F9400186F92 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEBAC0E1C0C5F9400186F92 /* UIImage+Gif.swift */; };
@@ -59,6 +60,7 @@
 		FB47B89D1C0F48E100B5E8A4 /* MyLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyLocation.swift; sourceTree = "<group>"; };
 		FB5D67B01C1987D900699501 /* glitch.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = glitch.gif; path = ../../../Dropbox/Dossier/glitch.gif; sourceTree = "<group>"; };
 		FB5D67B41C198D8500699501 /* glitch1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = glitch1.gif; path = ../../../Dropbox/glitch1.gif; sourceTree = "<group>"; };
+		FB8343071C3E69E70087B272 /* LogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
 		FBA37E531C0FA00400A8EE3A /* Home Route.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Home Route.gpx"; sourceTree = "<group>"; };
 		FBA37E551C15A6B100A8EE3A /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		FBEBAC0E1C0C5F9400186F92 /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+Gif.swift"; path = "../../../Downloads/SwiftGif-master/SwiftGifCommon/UIImage+Gif.swift"; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 			children = (
 				E8F50E271BE219DC001CE7F7 /* ViewController.swift */,
 				FB47B89D1C0F48E100B5E8A4 /* MyLocation.swift */,
+				FB8343071C3E69E70087B272 /* LogViewController.swift */,
 				E8F50E291BE219DC001CE7F7 /* Main.storyboard */,
 				FBA37E551C15A6B100A8EE3A /* StartViewController.swift */,
 				E8F50E2C1BE219DC001CE7F7 /* Assets.xcassets */,
@@ -287,6 +290,7 @@
 				FBEBAC0F1C0C5F9400186F92 /* UIImage+Gif.swift in Sources */,
 				E8F50E281BE219DC001CE7F7 /* ViewController.swift in Sources */,
 				FB47B89E1C0F48E100B5E8A4 /* MyLocation.swift in Sources */,
+				FB8343081C3E69E70087B272 /* LogViewController.swift in Sources */,
 				E8F50E261BE219DC001CE7F7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
