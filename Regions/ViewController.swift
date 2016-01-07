@@ -107,8 +107,8 @@ class ViewController: UIViewController {
         let Barrier1 = MyLocation(coord: CLLocationCoordinate2D(latitude: 50.716098, longitude: -1.875780), regionDistance: 200, identifier: "Barrier1")
         locationsArray.append(Barrier1)
         
-        let Barrier2 = MyLocation(coord: CLLocationCoordinate2D(latitude: 50.716098, longitude: -1.875780), regionDistance: 50, identifier: "Barrier2")
-        locationsArray.append(Barrier2)
+        let Seafront = MyLocation(coord: CLLocationCoordinate2D(latitude: 50.716098, longitude: -1.875780), regionDistance: 50, identifier: "Seafront")
+        locationsArray.append(Seafront)
         
         //HOME
         let Home = MyLocation(coord: CLLocationCoordinate2D(latitude: 50.734646, longitude: -1.877253), regionDistance: 20, identifier: "Home")
@@ -260,7 +260,7 @@ extension ViewController: CLLocationManagerDelegate {
         }
         
         
-        if  region.identifier == "Barrier2" {
+        if  region.identifier == "Seafront" {
             
             FirstLocationImg.alpha = 0
             UIView.animateWithDuration(4.0) {

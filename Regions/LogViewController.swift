@@ -18,6 +18,19 @@ class LogViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    @IBAction func dismiss(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+
+    }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showData" {
+            let vc = segue.destinationViewController as! DataViewController
+            vc.myLocation = sender as! MyLocation
+        }
+    }
+    
 }
 
 extension LogViewController: UITableViewDataSource {
@@ -52,6 +65,13 @@ extension LogViewController: UITableViewDelegate {
         }
         
         return 60
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let location  = locationsArray[indexPath.row]
+        if location.isFound {
+            performSegueWithIdentifier("showData", sender: location)
+        }
     }
     
 }
