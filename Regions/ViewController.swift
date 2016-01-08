@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     
     @IBAction func showAlert() {
         
-        let alertController = UIAlertController(title: "How to play", message: "Explore the bourenmouth seafront region on foot to discover clues" , preferredStyle: .Alert)
+        let alertController = UIAlertController(title: "How to play", message: "Explore the bourenmouth seafront region on foot to discover clues. Use the Log View to see unlocked data fragments " , preferredStyle: .Alert)
         
         let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
         alertController.addAction(defaultAction)
@@ -37,10 +37,14 @@ class ViewController: UIViewController {
     
     var locationsArray = [MyLocation]()
     
-    //var ignoreArray = [MyLocation.regionDistance > 51]()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 77.0/255.0, green: 99.0/255.0, blue: 201.0/255.0, alpha: 0.4)
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+
+
         
         //LOAD SUBVIEW IMAGES IN BACKGROUND
         
@@ -79,20 +83,6 @@ class ViewController: UIViewController {
             
         }, completion: nil)
         
-        //HOW TO PLAY ALERT
-        
-        let alertController = UIAlertController(title: "Default Style", message: "A standard alert.", preferredStyle: .Alert)
-        
-        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
-        }
-        alertController.addAction(cancelAction)
-        
-        let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
-        }
-        alertController.addAction(OKAction)
-        
-        self.presentViewController(alertController, animated: true) {
-        }
 
         //LOCATIONS
         
