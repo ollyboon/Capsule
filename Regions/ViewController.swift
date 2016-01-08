@@ -41,8 +41,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         
-        self.navigationController?.navigationBar.barTintColor = UIColor(red: 77.0/255.0, green: 99.0/255.0, blue: 201.0/255.0, alpha: 0.4)
-        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 75.0/255.0, green: 77.0/255.0, blue: 88.0/255.0, alpha: 1.0)
+        UINavigationBar.appearance().tintColor = UIColor(red: 254.0/255.0, green: 194.0/255.0, blue: 0.0/255.0, alpha: 1.0)
 
 
         
