@@ -18,8 +18,8 @@
 		FB47B89E1C0F48E100B5E8A4 /* MyLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB47B89D1C0F48E100B5E8A4 /* MyLocation.swift */; };
 		FB8343081C3E69E70087B272 /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8343071C3E69E70087B272 /* LogViewController.swift */; };
 		FB83430A1C3E8FF40087B272 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8343091C3E8FF40087B272 /* DataViewController.swift */; };
-		FB83430C1C3EA6B80087B272 /* glitch.gif in Resources */ = {isa = PBXBuildFile; fileRef = FB83430B1C3EA6B80087B272 /* glitch.gif */; };
-		FB83430E1C3EA75E0087B272 /* glitch1.gif in Resources */ = {isa = PBXBuildFile; fileRef = FB83430D1C3EA75E0087B272 /* glitch1.gif */; };
+		FB8343101C41BA660087B272 /* glitch1.gif in Resources */ = {isa = PBXBuildFile; fileRef = FB83430F1C41BA660087B272 /* glitch1.gif */; };
+		FB8343121C41BA770087B272 /* glitch.gif in Resources */ = {isa = PBXBuildFile; fileRef = FB8343111C41BA770087B272 /* glitch.gif */; };
 		FBA37E541C0FA00400A8EE3A /* Home Route.gpx in Resources */ = {isa = PBXBuildFile; fileRef = FBA37E531C0FA00400A8EE3A /* Home Route.gpx */; };
 		FBA37E561C15A6B100A8EE3A /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA37E551C15A6B100A8EE3A /* StartViewController.swift */; };
 		FBEBAC0F1C0C5F9400186F92 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEBAC0E1C0C5F9400186F92 /* UIImage+Gif.swift */; };
@@ -61,8 +61,8 @@
 		FB47B89D1C0F48E100B5E8A4 /* MyLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyLocation.swift; sourceTree = "<group>"; };
 		FB8343071C3E69E70087B272 /* LogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
 		FB8343091C3E8FF40087B272 /* DataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
-		FB83430B1C3EA6B80087B272 /* glitch.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = glitch.gif; path = ../../../Dropbox/Dossier/glitch.gif; sourceTree = "<group>"; };
-		FB83430D1C3EA75E0087B272 /* glitch1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = glitch1.gif; path = ../../glitch1.gif; sourceTree = "<group>"; };
+		FB83430F1C41BA660087B272 /* glitch1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = glitch1.gif; path = ../../../Dropbox/glitch1.gif; sourceTree = "<group>"; };
+		FB8343111C41BA770087B272 /* glitch.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = glitch.gif; path = "../../../Dropbox/Dossier/App Assets/glitch.gif"; sourceTree = "<group>"; };
 		FBA37E531C0FA00400A8EE3A /* Home Route.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Home Route.gpx"; sourceTree = "<group>"; };
 		FBA37E551C15A6B100A8EE3A /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		FBEBAC0E1C0C5F9400186F92 /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+Gif.swift"; path = "../../../Downloads/SwiftGif-master/SwiftGifCommon/UIImage+Gif.swift"; sourceTree = "<group>"; };
@@ -125,8 +125,8 @@
 				FB8343091C3E8FF40087B272 /* DataViewController.swift */,
 				FBA37E551C15A6B100A8EE3A /* StartViewController.swift */,
 				E8F50E2C1BE219DC001CE7F7 /* Assets.xcassets */,
-				FB83430B1C3EA6B80087B272 /* glitch.gif */,
-				FB83430D1C3EA75E0087B272 /* glitch1.gif */,
+				FB8343111C41BA770087B272 /* glitch.gif */,
+				FB83430F1C41BA660087B272 /* glitch1.gif */,
 				FBEBAC0E1C0C5F9400186F92 /* UIImage+Gif.swift */,
 				E8F50E251BE219DC001CE7F7 /* AppDelegate.swift */,
 				E8F50E551BE21D37001CE7F7 /* Bournemouth Loop.gpx */,
@@ -260,11 +260,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8F50E301BE219DC001CE7F7 /* LaunchScreen.storyboard in Resources */,
+				FB8343101C41BA660087B272 /* glitch1.gif in Resources */,
 				FBA37E541C0FA00400A8EE3A /* Home Route.gpx in Resources */,
 				E8F50E2D1BE219DC001CE7F7 /* Assets.xcassets in Resources */,
 				E8F50E2B1BE219DC001CE7F7 /* Main.storyboard in Resources */,
-				FB83430C1C3EA6B80087B272 /* glitch.gif in Resources */,
-				FB83430E1C3EA75E0087B272 /* glitch1.gif in Resources */,
+				FB8343121C41BA770087B272 /* glitch.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

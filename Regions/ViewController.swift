@@ -9,6 +9,7 @@
 import UIKit 
 import MapKit
 import CoreLocation
+import AudioToolbox
 
 class ViewController: UIViewController {
     
@@ -100,9 +101,29 @@ class ViewController: UIViewController {
         let Seafront = MyLocation(coord: CLLocationCoordinate2D(latitude: 50.716098, longitude: -1.875780), regionDistance: 50, identifier: "Seafront")
         locationsArray.append(Seafront)
         
-        //HOME
-        let Home = MyLocation(coord: CLLocationCoordinate2D(latitude: 50.734646, longitude: -1.877253), regionDistance: 20, identifier: "Home")
-        locationsArray.append(Home)
+//        //HOME
+//        let Home = MyLocation(coord: CLLocationCoordinate2D(latitude: 50.734646, longitude: -1.877253), regionDistance: 20, identifier: "Home")
+//        locationsArray.append(Home)
+        
+        let Barrier2 = MyLocation(coord: CLLocationCoordinate2D(latitude: 50.715387, longitude: -1.87804), regionDistance: 200, identifier: "Barrier2")
+        locationsArray.append(Barrier2)
+        
+        let Oceanarium = MyLocation(coord: CLLocationCoordinate2D(latitude: 50.715387, longitude: -1.87804), regionDistance: 50, identifier: "Oceanarium")
+        locationsArray.append(Oceanarium)
+        
+        let Barrier3 = MyLocation(coord: CLLocationCoordinate2D(latitude: 50.719517, longitude: -1.843064), regionDistance: 200, identifier: "Barrier3")
+        locationsArray.append(Barrier3)
+        
+        let Boscombe = MyLocation(coord: CLLocationCoordinate2D(latitude: 50.719517, longitude: -1.843064), regionDistance: 50, identifier: "Boscombe")
+        locationsArray.append(Boscombe)
+        
+        let Barrier4 = MyLocation(coord: CLLocationCoordinate2D(latitude: 50.719796, longitude: -1.879563), regionDistance: 200, identifier: "Barrier4")
+        locationsArray.append(Barrier4)
+        
+        let Gardens = MyLocation(coord: CLLocationCoordinate2D(latitude: 50.719796, longitude: -1.879563), regionDistance: 50, identifier: "Gardens")
+        locationsArray.append(Gardens)
+        
+        
     
         for location in locationsArray {
             locationManager.startMonitoringForRegion(location.region)
@@ -255,7 +276,12 @@ extension ViewController: CLLocationManagerDelegate {
             FirstLocationImg.alpha = 0
             UIView.animateWithDuration(4.0) {
                 self.FirstLocationImg.alpha = 1
+                
             }
+            
+            AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
+            
+            
         }
         
         
@@ -264,11 +290,8 @@ extension ViewController: CLLocationManagerDelegate {
     func locationManager(manager: CLLocationManager, didExitRegion region: CLRegion) {
         
         
-        FirstLocationImg.alpha = 1
-        UIView.animateWithDuration(1.0) {
-            self.FirstLocationImg.alpha = 0
-        }
-        
+        FirstLocationImg.alpha = 0
+
         imageView.alpha = 0
         
     }

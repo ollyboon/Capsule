@@ -23,7 +23,6 @@ class LogViewController: UIViewController {
 
     }
     
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showData" {
             let vc = segue.destinationViewController as! DataViewController
@@ -46,10 +45,11 @@ extension LogViewController: UITableViewDataSource {
         
         let titleLabel = cell?.viewWithTag(1) as! UILabel
         titleLabel.text = location.identifier
-        
         if location.isFound {
             cell?.accessoryType = .Checkmark
         }
+        
+        cell?.backgroundColor = UIColor.clearColor()
         
         return cell!
     }
@@ -63,11 +63,12 @@ extension LogViewController: UITableViewDelegate {
         if location.regionDistance > 51 {
             return 0
         }
-        
+
         return 60
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
         let location  = locationsArray[indexPath.row]
         if location.isFound {
             performSegueWithIdentifier("showData", sender: location)
