@@ -16,6 +16,11 @@ class LogViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "Fragments Log"
+        
+        
+        
     }
     
     @IBAction func dismiss(sender: AnyObject) {
@@ -29,6 +34,8 @@ class LogViewController: UIViewController {
             vc.myLocation = sender as! MyLocation
         }
     }
+    
+    
     
 }
 

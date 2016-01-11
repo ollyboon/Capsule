@@ -34,9 +34,15 @@ class ViewController: UIViewController {
     
     let FirstLocationImg = UIImageView()
     
+    let Fragment2Img = UIImageView ()
+    
+    let Fragment3Img = UIImageView ()
+    
     let locationManager = CLLocationManager()
     
     var locationsArray = [MyLocation]()
+    
+    var visitedArray = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,10 +60,20 @@ class ViewController: UIViewController {
         imageView.alpha = 0
         view.addSubview(imageView)
         
-        FirstLocationImg.image = UIImage(named: "cache1.png")
+        FirstLocationImg.image = UIImage(named: "Seafront.png")
         FirstLocationImg.frame = CGRect(x: 0.0, y: 5.0, width: 375.0, height: 650.0)
         FirstLocationImg.alpha=0
         view.addSubview(FirstLocationImg)
+        
+        Fragment2Img.image = UIImage(named: "Oceanarium.png")
+        Fragment2Img.frame = CGRect(x: 0.0, y: 5.0, width: 375.0, height: 650.0)
+        Fragment2Img.alpha=0
+        view.addSubview(Fragment2Img)
+        
+        Fragment3Img.image = UIImage(named: "Boscombe.png")
+        Fragment3Img.frame = CGRect(x: 0.0, y: 5.0, width: 375.0, height: 650.0)
+        Fragment3Img.alpha=0
+        view.addSubview(Fragment3Img)
         
         //ANIMATIONS
         
@@ -95,29 +111,29 @@ class ViewController: UIViewController {
         
         
         //BOURNMOUTH PIER
-        let Barrier1 = MyLocation(coord: CLLocationCoordinate2D(latitude: 50.716098, longitude: -1.875780), regionDistance: 200, identifier: "Barrier1")
+        let Barrier1 = MyLocation(coord: CLLocationCoordinate2D(latitude: 50.715591, longitude: -1.875529), regionDistance: 200, identifier: "Barrier1")
         locationsArray.append(Barrier1)
         
-        let Seafront = MyLocation(coord: CLLocationCoordinate2D(latitude: 50.716098, longitude: -1.875780), regionDistance: 50, identifier: "Seafront")
+        let Seafront = MyLocation(coord: CLLocationCoordinate2D(latitude: 50.715591, longitude: -1.875529), regionDistance: 50, identifier: "Seafront")
         locationsArray.append(Seafront)
         
 //        //HOME
 //        let Home = MyLocation(coord: CLLocationCoordinate2D(latitude: 50.734646, longitude: -1.877253), regionDistance: 20, identifier: "Home")
 //        locationsArray.append(Home)
         
-        let Barrier2 = MyLocation(coord: CLLocationCoordinate2D(latitude: 50.715387, longitude: -1.87804), regionDistance: 200, identifier: "Barrier2")
+        let Barrier2 = MyLocation(coord: CLLocationCoordinate2D(latitude: 50.713689, longitude: -1.886601), regionDistance: 100, identifier: "Barrier2")
         locationsArray.append(Barrier2)
         
-        let Oceanarium = MyLocation(coord: CLLocationCoordinate2D(latitude: 50.715387, longitude: -1.87804), regionDistance: 50, identifier: "Oceanarium")
+        let Oceanarium = MyLocation(coord: CLLocationCoordinate2D(latitude: 50.713689, longitude: -1.886601), regionDistance: 50, identifier: "Oceanarium")
         locationsArray.append(Oceanarium)
         
-        let Barrier3 = MyLocation(coord: CLLocationCoordinate2D(latitude: 50.719517, longitude: -1.843064), regionDistance: 200, identifier: "Barrier3")
+        let Barrier3 = MyLocation(coord: CLLocationCoordinate2D(latitude: 50.719517, longitude: -1.843064), regionDistance: 100, identifier: "Barrier3")
         locationsArray.append(Barrier3)
         
         let Boscombe = MyLocation(coord: CLLocationCoordinate2D(latitude: 50.719517, longitude: -1.843064), regionDistance: 50, identifier: "Boscombe")
         locationsArray.append(Boscombe)
         
-        let Barrier4 = MyLocation(coord: CLLocationCoordinate2D(latitude: 50.719796, longitude: -1.879563), regionDistance: 200, identifier: "Barrier4")
+        let Barrier4 = MyLocation(coord: CLLocationCoordinate2D(latitude: 50.719796, longitude: -1.879563), regionDistance: 100, identifier: "Barrier4")
         locationsArray.append(Barrier4)
         
         let Gardens = MyLocation(coord: CLLocationCoordinate2D(latitude: 50.719796, longitude: -1.879563), regionDistance: 50, identifier: "Gardens")
@@ -260,6 +276,10 @@ extension ViewController: CLLocationManagerDelegate {
   
     func locationManager(manager: CLLocationManager, didEnterRegion region: CLRegion) {
         
+        if !visitedArray.contains(region.identifier) {
+            visitedArray.append(region.identifier)
+        }
+        
         for location in locationsArray {
             if region.identifier == location.identifier {
                 location.isFound = true
@@ -274,7 +294,7 @@ extension ViewController: CLLocationManagerDelegate {
         if  region.identifier == "Seafront" {
             
             FirstLocationImg.alpha = 0
-            UIView.animateWithDuration(4.0) {
+            UIView.animateWithDuration(2.0) {
                 self.FirstLocationImg.alpha = 1
                 
             }
@@ -284,6 +304,21 @@ extension ViewController: CLLocationManagerDelegate {
             
         }
         
+        if  region.identifier == "Oceanarium" && visitedArray.contains("Seafront")  {
+            
+            Fragment2Img.alpha = 0
+            UIView.animateWithDuration(2.0) {
+                self.Fragment2Img.alpha = 1
+                
+            }
+            
+            AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
+            
+            
+        }
+        
+
+        
         
     }
     
@@ -291,7 +326,7 @@ extension ViewController: CLLocationManagerDelegate {
         
         
         FirstLocationImg.alpha = 0
-
+        Fragment2Img.alpha = 0
         imageView.alpha = 0
         
     }
