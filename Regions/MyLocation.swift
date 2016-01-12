@@ -3,6 +3,8 @@ import CoreLocation
 
 class MyLocation {
     
+    //Creating a custom object to hold the distance between user and location, coordinates and identifier. This will be used when defining any new location. 
+    
     var coord: CLLocationCoordinate2D!
     var distance: Double!
     var regionDistance: Double!

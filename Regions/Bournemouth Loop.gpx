@@ -8,17 +8,27 @@
     
     <wpt lat="50.716098" lon="-1.875780">
         <name>Bournemouth Pier</name>
-        <time>2014-09-24T14:55:50Z</time>
+        <time>2014-09-24T14:55:40Z</time>
     </wpt>
     
     <wpt lat="50.713689" lon="-1.886601">
         <name>Oceanarium</name>
-        <time>2014-09-24T14:56:10Z</time>
+        <time>2014-09-24T14:56:00Z</time>
+    </wpt>
+    
+    <wpt lat="50.719422" lon="-1.847634">
+        <name>Boscombe Pier</name>
+        <time>2014-09-24T14:56:02Z</time>
     </wpt>
     
     <wpt lat="50.719517" lon="-1.843064">
-        <name>Boscombe Pier</name>
-        <time>2014-09-24T14:57:10Z</time>
+        <name>Boscombe Pier2</name>
+        <time>2014-09-24T14:56:15Z</time>
+    </wpt>
+    
+    <wpt lat="50.716098" lon="-1.875780">
+        <name>Final</name>
+        <time>2014-09-24T14:56:30Z</time>
     </wpt>
     
 </gpx>
