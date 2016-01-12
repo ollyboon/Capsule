@@ -17,7 +17,6 @@
 		E8F50E541BE21A67001CE7F7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8F50E531BE21A67001CE7F7 /* MapKit.framework */; };
 		FB47B89E1C0F48E100B5E8A4 /* MyLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB47B89D1C0F48E100B5E8A4 /* MyLocation.swift */; };
 		FB5F8A0A1C4510D50051A9CD /* Static1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FB5F8A091C4510D50051A9CD /* Static1.mp3 */; };
-		FB5F8A0C1C4511C50051A9CD /* beeps.wav in Resources */ = {isa = PBXBuildFile; fileRef = FB5F8A0B1C4511C50051A9CD /* beeps.wav */; };
 		FB8343081C3E69E70087B272 /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8343071C3E69E70087B272 /* LogViewController.swift */; };
 		FB83430A1C3E8FF40087B272 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8343091C3E8FF40087B272 /* DataViewController.swift */; };
 		FB8343101C41BA660087B272 /* glitch1.gif in Resources */ = {isa = PBXBuildFile; fileRef = FB83430F1C41BA660087B272 /* glitch1.gif */; };
@@ -61,7 +60,6 @@
 		E8F50E551BE21D37001CE7F7 /* Bournemouth Loop.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Bournemouth Loop.gpx"; sourceTree = "<group>"; };
 		FB47B89D1C0F48E100B5E8A4 /* MyLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyLocation.swift; sourceTree = "<group>"; };
 		FB5F8A091C4510D50051A9CD /* Static1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Static1.mp3; path = "../../../Dropbox/Dossier/App Assets/Sounds/Static1.mp3"; sourceTree = "<group>"; };
-		FB5F8A0B1C4511C50051A9CD /* beeps.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = beeps.wav; path = "../../../Dropbox/Dossier/App Assets/Sounds/beeps.wav"; sourceTree = "<group>"; };
 		FB8343071C3E69E70087B272 /* LogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
 		FB8343091C3E8FF40087B272 /* DataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
 		FB83430F1C41BA660087B272 /* glitch1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = glitch1.gif; path = ../../../Dropbox/glitch1.gif; sourceTree = "<group>"; };
@@ -130,7 +128,6 @@
 				FB8343111C41BA770087B272 /* glitch.gif */,
 				FB83430F1C41BA660087B272 /* glitch1.gif */,
 				FB5F8A091C4510D50051A9CD /* Static1.mp3 */,
-				FB5F8A0B1C4511C50051A9CD /* beeps.wav */,
 				FBEBAC0E1C0C5F9400186F92 /* UIImage+Gif.swift */,
 				E8F50E251BE219DC001CE7F7 /* AppDelegate.swift */,
 				E8F50E551BE21D37001CE7F7 /* Bournemouth Loop.gpx */,
@@ -265,7 +262,6 @@
 				E8F50E301BE219DC001CE7F7 /* LaunchScreen.storyboard in Resources */,
 				FB8343101C41BA660087B272 /* glitch1.gif in Resources */,
 				FB5F8A0A1C4510D50051A9CD /* Static1.mp3 in Resources */,
-				FB5F8A0C1C4511C50051A9CD /* beeps.wav in Resources */,
 				E8F50E2D1BE219DC001CE7F7 /* Assets.xcassets in Resources */,
 				E8F50E2B1BE219DC001CE7F7 /* Main.storyboard in Resources */,
 				FB8343121C41BA770087B272 /* glitch.gif in Resources */,

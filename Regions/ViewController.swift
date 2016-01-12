@@ -111,7 +111,7 @@ class ViewController: UIViewController {
         Fragment3Img.alpha=0
         view.addSubview(Fragment3Img)
         
-        Fragment4Img.image = UIImage(named: "Gardens.png")
+        Fragment4Img.image = UIImage(named: "Final.png")
         Fragment4Img.frame = CGRect(x: 0.0, y: 5.0, width: 375.0, height: 650.0)
         Fragment4Img.alpha=0
         view.addSubview(Fragment4Img)
@@ -419,6 +419,8 @@ extension ViewController: CLLocationManagerDelegate {
         
         if  region.identifier == "Final" && visitedArray.contains("Boscombe")  {
             
+            Fragment1Img.removeFromSuperview()
+            
             Fragment4Img.alpha = 0
             UIView.animateWithDuration(2.0) {
                 self.Fragment4Img.alpha = 1
@@ -427,7 +429,6 @@ extension ViewController: CLLocationManagerDelegate {
             
             //As it is the same location as seafront, we turn off the Seafront image so it does not conflict with 'Final' image.
             
-            Fragment1Img.alpha = 0
             
             //if the user is in a region, check it off in the log.
             for location in locationsArray {
